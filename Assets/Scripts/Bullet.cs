@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour
 {
     Vector2 direction = Vector2.zero;
     private float charge;
+    [SerializeField] float fallOff;
     [SerializeField] float speed;
     [SerializeField] GameObject explosionPrefab;
     public void StartFiring(float charge, Vector2 movement, Vector3 start)
@@ -23,6 +24,13 @@ public class Bullet : MonoBehaviour
         if (gameObject.activeSelf)
         {
             transform.position += transform.up * Time.deltaTime * speed;
+            charge -= speed * Time.deltaTime * fallOff;
+            if (charge <= 0)
+            {
+                charge = 0;
+                gameObject.SetActive(false);
+            }
+            transform.localScale = new Vector3(charge, charge * 1.25f);
         }
     }
 
@@ -40,6 +48,7 @@ public class Bullet : MonoBehaviour
         GameObject explosion = Instantiate(explosionPrefab);
         explosion.transform.position = this.transform.position;
         explosion.transform.localScale = new Vector3(charge * 2f, charge * 2f);
+        explosion.GetComponent<Explosion>().SetCharge(charge);
         explosion.GetComponent<Explosion>().StartFade(5f);
         gameObject.SetActive(false);
     }

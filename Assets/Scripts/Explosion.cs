@@ -13,6 +13,11 @@ public class Explosion : MonoBehaviour
         playerInside = null;
         enemySanity = new List<Enemy>();
     }
+
+    public void SetCharge(float charge)
+    {
+        sanityLoss = charge / 2f;
+    }
     public void StartFade(float timer)
     {
         StartCoroutine(Wait(timer));
