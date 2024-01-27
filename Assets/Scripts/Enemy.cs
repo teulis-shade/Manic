@@ -5,13 +5,13 @@ using UnityEngine;
 
 abstract public class Enemy : MonoBehaviour
 {
-    public int hp;
-    [SerializeField] PlayerController player;
+    public float speed = 10f;
+    private PlayerController player;
 
 
     void Start()
     {
-        
+        player = GameObject.Find("Player").GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
@@ -21,7 +21,7 @@ abstract public class Enemy : MonoBehaviour
     }
 
     void GoToPlayer(){
-        float step = 10f * Time.deltaTime;
+        float step = speed * Time.deltaTime;
 
         // move sprite towards the target location
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position , step);
