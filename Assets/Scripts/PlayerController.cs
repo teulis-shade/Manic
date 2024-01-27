@@ -13,16 +13,19 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float chargingSpeed;
     [SerializeField] private GameObject gun;
+    [SerializeField] private float scale;
     private float currentCharge = 0f;
     private Bullet bullet;
     private BulletCharger bulletCharger;
     private Vector2 aimingDirection;
+    private Meter meter;
     private void Start()
     {
         bullet = FindObjectOfType<Bullet>();
         bullet.gameObject.SetActive(false);
         bulletCharger = FindObjectOfType<BulletCharger>();
         bulletCharger.gameObject.SetActive(false);
+        meter = FindObjectOfType<Meter>();
     }
     public void OnMove(InputAction.CallbackContext ctx)
     {
@@ -46,12 +49,14 @@ public class PlayerController : MonoBehaviour
         if (charging)
         {
             currentCharge += chargingSpeed * Time.deltaTime;
-            bulletCharger.Charging(currentCharge);
+            currentCharge = meter.UpdateMeterPreview(currentCharge);
+            bulletCharger.Charging(currentCharge * scale);
         }
         if (firing)
         {
             firing = false;
-            bullet.StartFiring(currentCharge, aimingDirection, bulletCharger.gameObject.transform.position);
+            bullet.StartFiring(currentCharge * scale, aimingDirection, bulletCharger.gameObject.transform.position);
+            meter.UpdateMeterOut(currentCharge);
             bulletCharger.StopCharging();
             currentCharge = 0f;
         }
@@ -78,6 +83,5 @@ public class PlayerController : MonoBehaviour
         }
         aimingDirection = aimVector.normalized;
         gun.transform.localRotation = Quaternion.LookRotation(Vector3.forward, new Vector3(aimingDirection.x, aimingDirection.y, 0f));
-        Debug.Log(aimingDirection);
     }
 }
