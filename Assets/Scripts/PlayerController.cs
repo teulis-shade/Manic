@@ -92,6 +92,6 @@ public class PlayerController : MonoBehaviour
         
 
 
-        gun.transform.localRotation = Quaternion.LookRotation(Vector3.forward, new Vector3(aimingDirection.x, aimingDirection.y, 0f));
+        gun.transform.localRotation = Quaternion.LookRotation(Vector3.forward, new Vector3(aimingDirection.y, -aimingDirection.x, 0f));
     }
 }

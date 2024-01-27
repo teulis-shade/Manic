@@ -10,7 +10,7 @@ public class BulletCharger : MonoBehaviour
         gameObject.SetActive(true);
         transform.localScale = new Vector3(currentCharge, currentCharge * .75f);
         //transform.localPosition = new Vector3(0f, .5f + currentCharge / 3f, 0.1f);
-        transform.localPosition = new Vector3(0f, .5f + currentCharge / 3f, 0.1f);
+        transform.localPosition = new Vector3(-.25f - currentCharge / 3f, 0f, 0.1f);
     }
 
     public void StopCharging()
