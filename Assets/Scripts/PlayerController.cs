@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float chargingSpeed;
     [SerializeField] private GameObject gun;
     [SerializeField] private float scale;
+    [HideInInspector] [SerializeField] private bool occultGun;
     private float currentCharge = 0f;
     private Bullet bullet;
     private BulletCharger bulletCharger;
@@ -25,6 +26,7 @@ public class PlayerController : MonoBehaviour
 
     //sprites
     //[SerializeField] private SpriteRenderer face;
+    private SpriteRenderer gunSprite;
 
     private void Start()
     {
@@ -35,6 +37,7 @@ public class PlayerController : MonoBehaviour
         meter = FindObjectOfType<Meter>();
         sanity = 100;
         animator = GetComponent<Animator>();
+        gunSprite = gun.GetComponent<SpriteRenderer>();
     }
     public void OnMove(InputAction.CallbackContext ctx)
     {
@@ -70,6 +73,13 @@ public class PlayerController : MonoBehaviour
             meter.UpdateMeterOut(currentCharge);
             bulletCharger.StopCharging();
             currentCharge = 0f;
+        }
+
+        // Hide gun if the animation if going upwards
+        if (occultGun) {
+            gunSprite.sortingOrder = -1;
+        } else {
+            gunSprite.sortingOrder = 1;
         }
     }
 
