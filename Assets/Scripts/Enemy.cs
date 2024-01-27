@@ -17,7 +17,12 @@ abstract public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GoToPlayer();
+        if (Vector2.Distance(transform.position, player.transform.position) > 2f){
+            GoToPlayer();
+        }else{
+            print("attack");
+        }
+        
     }
 
     void GoToPlayer(){
