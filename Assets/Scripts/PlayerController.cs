@@ -21,9 +21,11 @@ public class PlayerController : MonoBehaviour
     private Meter meter;
     private float sanity;
 
+    private Animator animator;
+
     //sprites
     //[SerializeField] private SpriteRenderer face;
-    [SerializeField] private PlayerAnimator playerAnimator;
+
     private void Start()
     {
         bullet = FindObjectOfType<Bullet>();
@@ -32,18 +34,23 @@ public class PlayerController : MonoBehaviour
         bulletCharger.gameObject.SetActive(false);
         meter = FindObjectOfType<Meter>();
         sanity = 100;
+        animator = GetComponent<Animator>();
     }
     public void OnMove(InputAction.CallbackContext ctx)
     {
+        movement = ctx.ReadValue<Vector2>();
         if (ctx.performed)
         {
             moving = true;
+            animator.SetFloat("X", movement.x);
+            animator.SetFloat("Y", movement.y);
+            animator.SetBool("IsWalking", true);
         }
         else if (ctx.canceled)
         {
             moving = false;
+            animator.SetBool("IsWalking", false);
         }
-        movement = ctx.ReadValue<Vector2>();
     }
 
     private void Update()
@@ -88,12 +95,6 @@ public class PlayerController : MonoBehaviour
             aimVector = Camera.main.ScreenToWorldPoint(ctx.ReadValue<Vector2>()) - gameObject.transform.position;
         }
         aimingDirection = aimVector.normalized;
-
-        //change player sprites
-        playerAnimator.ChangeSprite(aimingDirection);
-        
-
-
         gun.transform.localRotation = Quaternion.LookRotation(Vector3.forward, new Vector3(aimingDirection.y, -aimingDirection.x, 0f));
     }
 
