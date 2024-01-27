@@ -8,10 +8,18 @@ abstract public class Enemy : MonoBehaviour
     public float speed = 10f;
     private PlayerController player;
 
+    [SerializeField] float maxSanity;
+    float sanity;
+
 
     void Start()
     {
         player = FindObjectOfType<PlayerController>();
+        if (maxSanity == 0)
+        {
+            maxSanity = 1f;
+        }
+        sanity = maxSanity;
     }
 
     // Update is called once per frame
@@ -26,10 +34,15 @@ abstract public class Enemy : MonoBehaviour
     }
 
     void GoToPlayer(){
-        float step = speed * Time.deltaTime;
+        float step = speed * Time.deltaTime * (sanity / maxSanity);
 
         // move sprite towards the target location
-        transform.position = Vector2.MoveTowards(transform.position, player.transform.position , step);
+        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, step);
 
+    }
+
+    public void LoseSanity(float sanity)
+    {
+        this.sanity -= sanity;
     }
 }

@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     private BulletCharger bulletCharger;
     private Vector2 aimingDirection;
     private Meter meter;
+    private float sanity;
 
     //sprites
     //[SerializeField] private SpriteRenderer face;
@@ -30,6 +31,7 @@ public class PlayerController : MonoBehaviour
         bulletCharger = FindObjectOfType<BulletCharger>();
         bulletCharger.gameObject.SetActive(false);
         meter = FindObjectOfType<Meter>();
+        sanity = 100;
     }
     public void OnMove(InputAction.CallbackContext ctx)
     {
@@ -93,5 +95,10 @@ public class PlayerController : MonoBehaviour
 
 
         gun.transform.localRotation = Quaternion.LookRotation(Vector3.forward, new Vector3(aimingDirection.y, -aimingDirection.x, 0f));
+    }
+
+    public void ReduceSanity(float loss)
+    {
+        sanity -= loss;
     }
 }

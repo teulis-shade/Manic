@@ -27,9 +27,6 @@ public class PlayerAnimator : MonoBehaviour
     public void ChangeSprite(Vector2 aimDir){
         //print(aimDir[0]);
         float aimAngle = Vector2.Angle(aimDir, Vector2.right);
-        print(aimAngle);
-        Debug.DrawLine(Vector2.zero, aimDir, Color.magenta);
-        Debug.DrawLine(Vector2.zero, Vector2.right, Color.blue);
         //print(aimAngle * Mathf.Sign(aimDir[1]));
         aimAngle = aimAngle * Mathf.Sign(aimDir[1]);
         //print(aimDir[1]);
@@ -47,7 +44,6 @@ public class PlayerAnimator : MonoBehaviour
 
         }else if (-135 < aimAngle && aimAngle < -45){
         //}else if (225 < aimAngle && aimAngle < 315){
-            print("do i happen");
             face.sprite = faceDown;
 
 
