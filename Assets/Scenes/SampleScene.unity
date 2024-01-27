@@ -742,6 +742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76448ba2e1f69d34094d6cf5df691cc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fallOff: 0
   speed: 20
   explosionPrefab: {fileID: 0}
 --- !u!58 &1161625334
@@ -2823,10 +2824,6 @@ PrefabInstance:
     - target: {fileID: 5655917973004805553, guid: 46a99d8ce1d96114980a0fb6403c0049, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9185674768674137524, guid: 46a99d8ce1d96114980a0fb6403c0049, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
