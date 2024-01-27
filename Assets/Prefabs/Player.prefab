@@ -108,6 +108,7 @@ MonoBehaviour:
   chargingSpeed: 0.2
   gun: {fileID: 9167569078580242545}
   scale: 3
+  occultGun: 0
 --- !u!114 &6232058223018245667
 MonoBehaviour:
   m_ObjectHideFlags: 0
