@@ -42,8 +42,6 @@ public class PlayerController : MonoBehaviour
         if (ctx.performed)
         {
             moving = true;
-            animator.SetFloat("X", movement.x);
-            animator.SetFloat("Y", movement.y);
             animator.SetBool("IsWalking", true);
         }
         else if (ctx.canceled)
@@ -95,6 +93,8 @@ public class PlayerController : MonoBehaviour
             aimVector = Camera.main.ScreenToWorldPoint(ctx.ReadValue<Vector2>()) - gameObject.transform.position;
         }
         aimingDirection = aimVector.normalized;
+        animator.SetFloat("X", aimingDirection.x);
+        animator.SetFloat("Y", aimingDirection.y);
         gun.transform.localRotation = Quaternion.LookRotation(Vector3.forward, new Vector3(aimingDirection.y, -aimingDirection.x, 0f));
     }
 
