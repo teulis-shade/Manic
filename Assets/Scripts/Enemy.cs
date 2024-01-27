@@ -44,5 +44,9 @@ abstract public class Enemy : MonoBehaviour
     public void LoseSanity(float sanity)
     {
         this.sanity -= sanity;
+        if (this.sanity < 0)
+        {
+            this.sanity = 0;
+        }
     }
 }
