@@ -19,6 +19,10 @@ public class PlayerController : MonoBehaviour
     private BulletCharger bulletCharger;
     private Vector2 aimingDirection;
     private Meter meter;
+
+    //sprites
+    //[SerializeField] private SpriteRenderer face;
+    [SerializeField] private PlayerAnimator playerAnimator;
     private void Start()
     {
         bullet = FindObjectOfType<Bullet>();
@@ -82,6 +86,12 @@ public class PlayerController : MonoBehaviour
             aimVector = Camera.main.ScreenToWorldPoint(ctx.ReadValue<Vector2>()) - gameObject.transform.position;
         }
         aimingDirection = aimVector.normalized;
+
+        //change player sprites
+        playerAnimator.ChangeSprite(aimingDirection);
+        
+
+
         gun.transform.localRotation = Quaternion.LookRotation(Vector3.forward, new Vector3(aimingDirection.x, aimingDirection.y, 0f));
     }
 }
