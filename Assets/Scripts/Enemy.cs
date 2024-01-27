@@ -11,7 +11,7 @@ abstract public class Enemy : MonoBehaviour
 
     void Start()
     {
-        player = GameObject.Find("Player").GetComponent<PlayerController>();
+        player = FindObjectOfType<PlayerController>();
     }
 
     // Update is called once per frame
