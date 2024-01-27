@@ -2,12 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
     private bool moving = false;
+    private bool charging = false;
+    private bool firing = false;
     private Vector2 movement = Vector2.zero;
     [SerializeField] private float speed;
+    [SerializeField] private float chargingSpeed;
+    [SerializeField] private GameObject gun;
+    private float currentCharge = 0f;
+    private Bullet bullet;
+    private BulletCharger bulletCharger;
+    private Vector2 aimingDirection;
+    private void Start()
+    {
+        bullet = FindObjectOfType<Bullet>();
+        bullet.gameObject.SetActive(false);
+        bulletCharger = FindObjectOfType<BulletCharger>();
+        bulletCharger.gameObject.SetActive(false);
+    }
     public void OnMove(InputAction.CallbackContext ctx)
     {
         if (ctx.performed)
@@ -27,15 +43,41 @@ public class PlayerController : MonoBehaviour
         {
             gameObject.transform.Translate(movement * Time.deltaTime * speed);
         }
+        if (charging)
+        {
+            currentCharge += chargingSpeed * Time.deltaTime;
+            bulletCharger.Charging(currentCharge);
+        }
+        if (firing)
+        {
+            firing = false;
+            bullet.StartFiring(currentCharge, aimingDirection, bulletCharger.gameObject.transform.position);
+            bulletCharger.StopCharging();
+            currentCharge = 0f;
+        }
     }
 
-    public void OnAttack()
+    public void OnAttack(InputAction.CallbackContext ctx)
     {
-
+        if (ctx.performed)
+        {
+            charging = true;
+        }
+        else if (ctx.canceled && charging)
+        {
+            charging = false;
+            firing = true;
+        }
     }
-
-    public void OnAim()
+    public void OnAim(InputAction.CallbackContext ctx)
     {
-
+        Vector2 aimVector = ctx.ReadValue<Vector2>();
+        if (ctx.control.path.Equals("/Mouse/position"))
+        {
+            aimVector = Camera.main.ScreenToWorldPoint(ctx.ReadValue<Vector2>()) - gameObject.transform.position;
+        }
+        aimingDirection = aimVector.normalized;
+        gun.transform.localRotation = Quaternion.LookRotation(Vector3.forward, new Vector3(aimingDirection.x, aimingDirection.y, 0f));
+        Debug.Log(aimingDirection);
     }
 }

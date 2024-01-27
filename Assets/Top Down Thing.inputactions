@@ -224,7 +224,7 @@
                 {
                     "name": "",
                     "id": "0cc1a9c8-6d31-44b5-bab3-f9a44582894f",
-                    "path": "<Pointer>/position",
+                    "path": "<Mouse>/position",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
