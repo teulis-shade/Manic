@@ -16,15 +16,59 @@ public class RoomClear : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Enemy enemy = FindObjectOfType<Enemy>();
-        if (enemy == null && spriteRenderer.enabled == false){
-            spriteRenderer.enabled = true;
-            //SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex + 1);
+        //Enemy enemy = FindObjectOfType<Enemy>();
+        //gotta check for loop all enemies and that none of them have main script
+        if (spriteRenderer.enabled == false){
+            Enemy[] enemyList = FindObjectsOfType<Enemy>();
+            print(enemyList);
+            print(enemyList.Length);
+    
+            int dead_cnt = 0;
+            foreach(Enemy enemy in enemyList)
+            {
+                //if enemy dead
+                if (enemy.GetComponent<Enemy>().enabled == false){
+                    dead_cnt += 1;
+                }
+                print(enemy.GetComponent<Enemy>().enabled);
+                print(enemy);
+                //objet.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, alphaLevel);
+            }
+
+            if (dead_cnt == enemyList.Length){
+                spriteRenderer.enabled = true;
+            }
         }
+        // for(var i = 0; i < firstList.Length; i++)
+        // {
+        //     if(firstList[i].gameObject.name == nameToLookFor)
+        //     {
+        //         finalList.Add(firstList[i]);
+        //     }
+        // }
+
+
+        // if (enem == null && spriteRenderer.enabled == false){
+        //     spriteRenderer.enabled = true;
+        //     //SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex + 1);
+        // }
     }
 
     void OnTriggerEnter2D(Collider2D col)
     {
+        
+        // List<Object> finalList = new List<Object>();
+        // string nameToLookFor = "name of game object";
+
+        // for(var i = 0; i < firstList.Length; i++)
+        // {
+        //     if(firstList[i].gameObject.name == nameToLookFor)
+        //     {
+        //         finalList.Add(firstList[i]);
+        //     }
+        // }
+
+
         if (spriteRenderer.enabled && col.GetComponent<PlayerController>() != null){
             SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex + 1);
         }
