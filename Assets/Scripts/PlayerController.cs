@@ -39,6 +39,9 @@ public class PlayerController : MonoBehaviour
     public AudioClip normalMusic;
     public AudioClip zootedMusic;
 
+    public SaveMusic saveMusicPrefab;
+    public SaveMusic saveMusic;
+
     private void Start()
     {
         bullet = FindObjectOfType<Bullet>();
@@ -50,6 +53,35 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         gunSprite = gun.GetComponent<SpriteRenderer>();
         cam = FindObjectOfType<CameraController>();
+
+        //save music
+
+        //float clip_time = Camera.main.GetComponent<AudioSource>().time;
+        //SaveMusic saveMusic = FindObjectOfType<SaveMusic>();
+        
+        if (FindObjectOfType<SaveMusic>() == null)
+        {//first time: instantiate
+            print("if i see this twice i say fuck");
+            DontDestroyOnLoad(Instantiate(saveMusicPrefab));
+            saveMusic = FindObjectOfType<SaveMusic>();
+            //get and set
+            Camera.main.GetComponent<AudioSource>().clip = normalMusic;
+            
+            Camera.main.GetComponent<AudioSource>().Play();
+            saveMusic.SetMusicLength(Camera.main.GetComponent<AudioSource>().time);
+            //float clip_time = Camera.main.GetComponent<AudioSource>().time;
+        }else{
+            //get and start music
+            saveMusic = FindObjectOfType<SaveMusic>();
+           
+            Camera.main.GetComponent<AudioSource>().clip = normalMusic;
+            
+            Camera.main.GetComponent<AudioSource>().Play();
+            Camera.main.GetComponent<AudioSource>().time = saveMusic.GetMusicLength();
+        }
+
+        
+
     }
     public void OnMove(InputAction.CallbackContext ctx)
     {
@@ -225,6 +257,8 @@ public class PlayerController : MonoBehaviour
             
             Camera.main.GetComponent<AudioSource>().Play();
             Camera.main.GetComponent<AudioSource>().time = clip_time;
+
+            saveMusic.SetMusicLength(clip_time);
         }else {
             float clip_time = Camera.main.GetComponent<AudioSource>().time;
             Camera.main.GetComponent<AudioSource>().clip = zootedMusic;
@@ -232,7 +266,13 @@ public class PlayerController : MonoBehaviour
             Camera.main.GetComponent<AudioSource>().Play();
             Camera.main.GetComponent<AudioSource>().time = clip_time;
 
+
+            saveMusic.SetMusicLength(clip_time);
         }
+        
+
+
+
 
 
     }

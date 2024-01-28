@@ -115,6 +115,8 @@ MonoBehaviour:
   sanityReductionCooldown: 3
   normalMusic: {fileID: 8300000, guid: d06234725a600174aaba572bd308abf5, type: 3}
   zootedMusic: {fileID: 8300000, guid: 2083f268e512d6c4e8174534e5626c1b, type: 3}
+  saveMusicPrefab: {fileID: 6464415469328008829, guid: 8719b3709bfd2794e8ba5dba9b643d11, type: 3}
+  saveMusic: {fileID: 0}
 --- !u!114 &6232058223018245667
 MonoBehaviour:
   m_ObjectHideFlags: 0
