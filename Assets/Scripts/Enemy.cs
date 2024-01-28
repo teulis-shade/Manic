@@ -12,9 +12,12 @@ abstract public class Enemy : MonoBehaviour
     [SerializeField] float gasGain;
     float sanity;
 
+    private Animator animator;
+
 
     void Start()
     {
+        animator = GetComponent<Animator>();
         player = FindObjectOfType<PlayerController>();
         if (maxSanity == 0)
         {
@@ -29,7 +32,7 @@ abstract public class Enemy : MonoBehaviour
         if (Vector2.Distance(transform.position, player.transform.position) > 2f){
             GoToPlayer();
         }else{
-            print("attack");
+            // print("attack");
         }
         
     }
@@ -39,7 +42,9 @@ abstract public class Enemy : MonoBehaviour
 
         // move sprite towards the target location
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, step);
-
+        var moveDirection = (player.transform.position - transform.position).normalized;
+        animator.SetFloat("X", moveDirection.x);
+        animator.SetFloat("Y", moveDirection.y);
     }
 
     public void LoseSanity(float sanity)
