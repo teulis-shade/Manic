@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
@@ -107,6 +108,9 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        if (sanity == 0) {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
         cam.UpdatePostProcessing(1 - sanity / maxSanity);
 
         if (sanity / maxSanity < 0.33f)
