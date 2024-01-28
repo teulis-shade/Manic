@@ -2,10 +2,10 @@ Grin And Gas
 
 
 Made by:
-Vittorio Corbo
-Tristan Ziegler
-Jessica
-Carlos Hernandez
+Vittorio Corbo,
+Tristan Ziegler,
+Jessica,
+Carlos Hernandez,
 Will (kinda)
 
 Assets from:
