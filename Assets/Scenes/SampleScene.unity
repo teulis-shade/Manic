@@ -2653,6 +2653,14 @@ PrefabInstance:
       propertyPath: meleeRadius
       value: 2.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5677444981109407012, guid: 46a99d8ce1d96114980a0fb6403c0049, type: 3}
+      propertyPath: sanityReduction
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5677444981109407012, guid: 46a99d8ce1d96114980a0fb6403c0049, type: 3}
+      propertyPath: sanityReductionCooldown
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float meleeRadius;
     [HideInInspector] [SerializeField] private bool occultGun;
     [SerializeField] private float maxSanity;
+    [SerializeField] private float sanityReduction;
+    [SerializeField] private float sanityReductionCooldown;
     private CameraController cam;
     private float currentCharge = 0f;
     private Bullet bullet;
@@ -24,6 +26,8 @@ public class PlayerController : MonoBehaviour
     private Vector2 aimingDirection;
     private Meter meter;
     private float sanity;
+
+    private Coroutine sanityCoroutine;
 
     private Animator animator;
 
@@ -139,6 +143,26 @@ public class PlayerController : MonoBehaviour
         if (sanity < 0)
         {
             sanity = 0;
+        }
+        if (sanityCoroutine != null)
+        {
+            StopCoroutine(sanityCoroutine);
+            sanityCoroutine = null;
+        }
+        sanityCoroutine = StartCoroutine(ReduceSanity());
+    }
+
+    IEnumerator ReduceSanity()
+    {
+        yield return new WaitForSeconds(sanityReductionCooldown);
+        while (true)
+        {
+            sanity += sanityReduction * .01f;
+            if (sanity > maxSanity)
+            {
+                sanity = maxSanity;
+            }
+            yield return new WaitForSeconds(.01f);
         }
     }
 }
