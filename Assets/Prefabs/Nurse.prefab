@@ -304,7 +304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  attackRange: 4
+  attackRange: 8
   player: {fileID: 0}
   maxSanity: 1
   gasGain: 1
@@ -314,10 +314,10 @@ MonoBehaviour:
   sanity: 0
   attack: 0
   weapon: {fileID: 1565644137274230511}
-  attackTime: 1
-  attackSpeed: 0.5
+  attackTime: 0.5
+  attackSpeed: 0
   attackCooldownTime: 3
-  cooldownSpeed: 1
+  cooldownSpeed: 0
 --- !u!50 &3805229827452037890
 Rigidbody2D:
   serializedVersion: 4

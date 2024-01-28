@@ -8202,6 +8202,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 978328992742544718, guid: 892f3df1d59c81d4bb836a3df511f966, type: 3}
+      propertyPath: attackTime
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 1825414042681658545, guid: 892f3df1d59c81d4bb836a3df511f966, type: 3}
       propertyPath: m_Name
       value: Doctor

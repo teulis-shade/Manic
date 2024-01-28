@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  attackRange: 5
+  attackRange: 7
   player: {fileID: 0}
   maxSanity: 1
   gasGain: 1
@@ -146,10 +146,10 @@ MonoBehaviour:
   sanity: 0
   attack: 0
   weapon: {fileID: 8011225808340648259}
-  attackTime: 1
+  attackTime: 0.5
   attackSpeed: 0
   attackCooldownTime: 1
-  cooldownSpeed: 1
+  cooldownSpeed: 4
   maskOn: 0
   shootCooldown: 0.5
   TazerShot: {fileID: 544683256695092898, guid: f1e7da8dffaf4b74ab705902213fd0db, type: 3}

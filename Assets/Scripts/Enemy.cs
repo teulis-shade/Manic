@@ -30,10 +30,10 @@ abstract public class Enemy : MonoBehaviour
     //ATTACK 
     public float attackTime = 1f;
     public float attackSpeed = 1f;
-    private Coroutine attackCoroutine;
+    public Coroutine attackCoroutine;
 
     //ATTACK COOLDOWN
-    private Coroutine attackCooldownCoroutine;
+    public Coroutine attackCooldownCoroutine;
     public float attackCooldownTime = 1f;
     public float cooldownSpeed = 1f;
 
@@ -86,6 +86,7 @@ abstract public class Enemy : MonoBehaviour
         float curSpeed = speed * (sanity / maxSanity);
         // move sprite towards the target location
         if (aiPath == null){
+            print("asdf");
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position, step);
         }else{
             aiPath.maxSpeed = curSpeed;

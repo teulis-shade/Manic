@@ -127,6 +127,7 @@ public class Doctor : Enemy
             //shoot
             weapon.GetComponent<SpriteRenderer>().enabled = true;
             if (shootCoroutine == null){
+                //REMOVE TO MAKE SANE
                 shootCoroutine = StartCoroutine(Shoot(shootCooldown));
             }
             
