@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 826959473711009670}
   - component: {fileID: 219428434079043176}
-  - component: {fileID: 5639034042809972132}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -74,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 53664a74963d7db46be98d6884e93818, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ebb8d56e57ff71f4986c8a351728c487, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -85,20 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5639034042809972132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 761218576415873740}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c29cff538c195c249b69c6f2236de67b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Library: []
-  m_SpriteLibraryAsset: {fileID: 0}
 --- !u!1 &1825414042681658545
 GameObject:
   m_ObjectHideFlags: 0
@@ -111,6 +96,7 @@ GameObject:
   - component: {fileID: 978328992742544718}
   - component: {fileID: 5896882393368531544}
   - component: {fileID: 6607260481246681689}
+  - component: {fileID: 3833115151539667998}
   m_Layer: 0
   m_Name: Doctor
   m_TagString: Untagged
@@ -221,3 +207,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.61223793, y: 1.954495}
   m_EdgeRadius: 0
+--- !u!95 &3833115151539667998
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825414042681658545}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 600a95b7a2fff4344978a5d2547014d4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
