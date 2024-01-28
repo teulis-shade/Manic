@@ -569,7 +569,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAACYn+vGQ4j/aQIAACUFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE2P2jAQ/SvI54ICggV6a4Fle2BBS6u95GLsCbFw7Mh2+BT/vWMnISltueC8mXl+b2aSGxHK5sCcNksj+EpzIF87xJ/Jl04TfIMz3Wu1FVeocz4Fd6lPoiHngzqhEe/7MqszcEawb2ovfXKEYKFEok224HuYaesswgmVFjBktPPVCqFbh5zxrzv1JRc8Dcb+dMXTNOrc8chAOTBNap0Y9YZT/5tU6ZPedBiNo9GiG01CYaGYpFkO3Lto6geTiqA/CmkK/VUZ3gvTUgpbiSPukgfz2zwFA949FxS9BkH93giBFMQ+dZ64Xb1OEguukmvoZS4MNq2kJd912cmM2kMp7Ehl4S8qlZeUq7+i3X4IJ0Znb/Wt/cjf4FLBDh/0wqh1rUa34XlLeOjOicoD3Un4TEG966XRheIYdKbwpYWFwbx5fBibpcAODV5KfQKL/B/jqsbkPdyD9/NMimxXTrIEtlKHdodlAIOD+YGCw6rYigJRr+KXhZ90396pKvAqjHUYqlwqL2+nC+NTySL0zLsp3EwbBabNkIOi0l02yOOeJ/gU+3/VK/WvT3V7FavfiqeSADf5UfQU2ujTY1o21acV2HRdOCkUNK32gXds1EwrVS5Y21Jdti1MQlmrbF8I/uduEcr5cDSg08nw5SXp72h3lzA+4WM+gNF4GLEBCcsnFPqkclMKrdqDY1MNucJFq78qnaWheVh2buhpKa6Ztk2mUIneMgOg1iXDQzgYvATfSr7gAhu0BeeECgMnt5hIzQ7A4wdRHJwuzs7QuGGJSS6O2nkkJrPwGYmJhx/LvDFwFHDyl9dkd3L/DVBLAwQUAAAICAAAmJ/rJOMwO20AAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNdRUEovSizIKAaKGII4pZkpIHa0UmJKiompUaKlhYmZWZphUqJuUlpyikWKeYpRqqm5iUGykVIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAAmJ/rxkOI/2kCAAAlBQAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAmJ/rJOMwO20AAAB4AAAACQAkAAAAAAAAAAAAAAC2AgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAG4DAAAAAA==
+    dataString: UEsDBBQAAAgIAACYn+vdSTiXYQIAABYFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE1z2jAQ/SuMziVjPCSB3logpAcSJjSTiy9CWmMNsuSRZD6S4b93JcvYpdOTpd23u+/trvxFhLIVMKfN0gi+0hzI9wHxZ/Jt0Dmf4UR3Wm3EJ7SYD8Fd4UE0YN6oExrtIx9mdQnOCPZD7aQHJ2islci1KRd8BzNtnUVzTqUFdBntfLRC09eAnPAznPqQM57SR3/6xNM0GVzwyEA5MD1ocncfsfHowQ22VkzSsgLuiXch6SQGjKYBplBSRHj6TEspbORD3LkKejdVAQa8YC4oygscUrwWIHaFi5dr7GueW3BRu6HnuTDYpSYp+amb1pXU7htaByprX2YSCDUpV/94h6Pgzo0un9uqo8RXcIVg+zd6ZtS6Xmf75nlHexR6c6RyT7cSPgpQL3ppdK04Op2pfWhtIZ1316uwWQFs39kbqjfGuuqa3Q6yHaPXcAnaTzMpyq133Y0bw0bq0OwwfTA4ll9IOOyGjSnQ6lm8W/hNd/0lio4nYaxDV1SpPL2tro2HkkXomVdTu5k2Ckw/QwWKSndeYx53O8Eb3/+jnqh/L7F69LXP4CYkmDt8kty41vp4nZYt9HEFtnitnRQKulZ7xws2aqaVahasL6kN29Qmp6wXtqsF/3u3COV8fJ/S6WT88JCPtnS4zRmf8Eeewv3jOGEpCcsnFOqkct0Qje3BsakuucJFa38jg6WhVVh2buhxKT5LbTukULneMAOgXpsMV+JgsAi+Sb7gAhu0AeeECgMnXxmRmu2BZ9dEWVC6ODlDsy5LRipx0M5bMjIL/42MePN1mdcGDgKOvnib7EIufwBQSwMEFAAACAgAAJif6yTjMDttAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTXUVBKL0osyCgGihiCOKWZKSB2tFJiSoqJqVGipYWJmVmaYVKiblJacopFinmKUaqpuYlBspFSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAJif691JOJdhAgAAFgUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAJif6yTjMDttAAAAeAAAAAkAJAAAAAAAAAAAAAAArgIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAABmAwAAAAA=
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -597,7 +597,39 @@ MonoBehaviour:
     _MeshEdgeColor: {r: 0, g: 0, b: 0, a: 0.5}
     _AreaColors:
     - {r: 0, g: 0, b: 0, a: 0}
-  tagNames: []
+  tagNames:
+  - Basic Ground
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 17
+  - 18
+  - 19
+  - 20
+  - 21
+  - 22
+  - 23
+  - 24
+  - 25
+  - 26
+  - 27
+  - 28
+  - 29
+  - 30
+  - 31
   heuristic: 2
   heuristicScale: 1
   threadCount: 1
@@ -3753,7 +3785,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.12542105, y: 0.0679363}
+  m_Offset: {x: -0.049390435, y: -0.020855665}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3764,7 +3796,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2508421, y: 3.706998}
+  m_Size: {x: 1.571861, y: 2.765893}
   m_EdgeRadius: 0
 --- !u!114 &5902635157671510726
 MonoBehaviour:
@@ -4031,7 +4063,7 @@ Transform:
   m_GameObject: {fileID: 4679636094530847234}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.38, y: -2.04, z: -0.03260707}
+  m_LocalPosition: {x: 2.38, y: -3.09, z: -0.03260707}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4066,8 +4098,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 5
-  radius: 2.13
-  height: 4.01
+  radius: 2.5
+  height: 8
   canMove: 1
   maxSpeed: 1
   gravity: {x: NaN, y: NaN, z: NaN}
@@ -4080,7 +4112,7 @@ MonoBehaviour:
   orientation: 1
   enableRotation: 0
   autoRepath:
-    mode: 2
+    mode: 1
     interval: 0.5
     sensitivity: 20
     maximumInterval: 1
@@ -4089,7 +4121,7 @@ MonoBehaviour:
   maxAcceleration: 10
   rotationSpeed: 360
   slowdownDistance: 0
-  pickNextWaypointDist: 1.2
+  pickNextWaypointDist: 0.5
   endReachedDistance: 0
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
@@ -4109,7 +4141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   drawGizmos: 1
-  detailedGizmos: 0
+  detailedGizmos: 1
   startEndModifier:
     addPoints: 0
     exactStartPoint: 3
@@ -4194,7 +4226,7 @@ MonoBehaviour:
   maxAcceleration: 10
   rotationSpeed: 360
   slowdownDistance: 0
-  pickNextWaypointDist: 1.2
+  pickNextWaypointDist: 0.5
   endReachedDistance: 0
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
@@ -4214,7 +4246,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   drawGizmos: 1
-  detailedGizmos: 0
+  detailedGizmos: 1
   startEndModifier:
     addPoints: 0
     exactStartPoint: 3
@@ -4350,7 +4382,7 @@ MonoBehaviour:
   maxAcceleration: 10
   rotationSpeed: 360
   slowdownDistance: 0
-  pickNextWaypointDist: 1.2
+  pickNextWaypointDist: 0.5
   endReachedDistance: 0
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
@@ -4370,7 +4402,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   drawGizmos: 1
-  detailedGizmos: 0
+  detailedGizmos: 1
   startEndModifier:
     addPoints: 0
     exactStartPoint: 3
