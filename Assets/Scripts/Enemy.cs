@@ -25,7 +25,7 @@ abstract public class Enemy : MonoBehaviour
 
     private float ogSpeed;
     
-
+    public GameObject weapon;
     //ATTACK 
     public float attackTime = 1f;
     public float attackSpeed = 1f;
@@ -51,7 +51,7 @@ abstract public class Enemy : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public virtual void Update()
     {
         //wardens *** too fat
        //if 
