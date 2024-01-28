@@ -10,7 +10,7 @@ abstract public class Enemy : MonoBehaviour
     public float speed = 10f;
     //private float ogSpeed = speed;
     public float attackRange = 2f;
-    private PlayerController player;
+    public PlayerController player;
 
     [SerializeField] float maxSanity;
     [SerializeField] float gasGain;

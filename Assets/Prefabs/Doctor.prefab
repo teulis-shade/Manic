@@ -97,8 +97,7 @@ GameObject:
   - component: {fileID: 5896882393368531544}
   - component: {fileID: 6607260481246681689}
   - component: {fileID: 3833115151539667998}
-  - component: {fileID: 559105557146893822}
-  - component: {fileID: 518242386565270195}
+  - component: {fileID: 1596419688088867578}
   m_Layer: 0
   m_Name: Doctor
   m_TagString: Untagged
@@ -137,6 +136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   attackRange: 2
+  player: {fileID: 0}
   maxSanity: 1
   gasGain: 1
   insaneModeSanity: 0.1
@@ -145,10 +145,12 @@ MonoBehaviour:
   attack: 0
   weapon: {fileID: 8011225808340648259}
   attackTime: 1
-  attackSpeed: 1
+  attackSpeed: 0
   attackCooldownTime: 1
   cooldownSpeed: 1
   maskOn: 0
+  shootCooldown: 0.4
+  TazerShot: {fileID: 544683256695092898, guid: f1e7da8dffaf4b74ab705902213fd0db, type: 3}
 --- !u!50 &5896882393368531544
 Rigidbody2D:
   serializedVersion: 4
@@ -242,22 +244,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &559105557146893822
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1825414042681658545}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c42738542f46d4e4a8a7146e3466acd4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxSpeed: 30
-  falloff: 7.5
-  curSpeed: 0
---- !u!114 &518242386565270195
+--- !u!114 &1596419688088867578
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
