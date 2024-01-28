@@ -164,11 +164,38 @@ AnimationClip:
     classID: 212
     script: {fileID: 0}
     flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_FlipX
+    path: Player_sprites/Feet
+    classID: 212
+    script: {fileID: 0}
+    flags: 0
   m_PPtrCurves:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 21300000, guid: 70bf9fd5e6f2eca44ab2ca5b0b4e1bd7, type: 3}
+      value: {fileID: 21300000, guid: c011f880b637bcb4cbcd8774a3b3c733, type: 3}
+    - time: 0.125
+      value: {fileID: 21300000, guid: d2fe4a02c897aa84e8d80f2a48701b1a, type: 3}
+    - time: 0.25
+      value: {fileID: 21300000, guid: 33b8381a36ec28d4cbbf2cf116de55de, type: 3}
+    - time: 0.375
+      value: {fileID: 21300000, guid: edde271f56f81694cb316c3fae8a5768, type: 3}
     attribute: m_Sprite
     path: Player_sprites/Body
     classID: 212
@@ -177,7 +204,13 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 21300000, guid: b5baaf29afb12b447ab7b8d396a38de5, type: 3}
+      value: {fileID: 21300000, guid: 79b1512be5a484d49b6e42710cf9b8e2, type: 3}
+    - time: 0.125
+      value: {fileID: 21300000, guid: 94070b631d937da489501e8d44e9f366, type: 3}
+    - time: 0.25
+      value: {fileID: 21300000, guid: a3d992c2ea633f54d84c12f7ba128b70, type: 3}
+    - time: 0.375
+      value: {fileID: 21300000, guid: 763418b9282af354792ff701b6ce6c00, type: 3}
     attribute: m_Sprite
     path: Player_sprites/Feet
     classID: 212
@@ -186,7 +219,13 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 21300000, guid: 8583ec8791b645842b19bc9b03cb7b4b, type: 3}
+      value: {fileID: 21300000, guid: 6dd93af3e3055864cb8292e6925f417f, type: 3}
+    - time: 0.125
+      value: {fileID: 21300000, guid: cf51e4b6244799c44bfad62947fad4a7, type: 3}
+    - time: 0.25
+      value: {fileID: 21300000, guid: cd249a48902a49945b83f425b64efb95, type: 3}
+    - time: 0.375
+      value: {fileID: 21300000, guid: 661eb0058bc255e40977b9aafe3030de, type: 3}
     attribute: m_Sprite
     path: Player_sprites/Head
     classID: 212
@@ -201,7 +240,7 @@ AnimationClip:
     classID: 212
     script: {fileID: 0}
     flags: 2
-  m_SampleRate: 60
+  m_SampleRate: 8
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -247,6 +286,15 @@ AnimationClip:
     - serializedVersion: 2
       path: 1926661051
       attribute: 1444465954
+      script: {fileID: 0}
+      typeID: 212
+      customType: 0
+      isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 4074019979
+      attribute: 555744692
       script: {fileID: 0}
       typeID: 212
       customType: 0
@@ -308,22 +356,31 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 70bf9fd5e6f2eca44ab2ca5b0b4e1bd7, type: 3}
-    - {fileID: 21300000, guid: b5baaf29afb12b447ab7b8d396a38de5, type: 3}
-    - {fileID: 21300000, guid: 8583ec8791b645842b19bc9b03cb7b4b, type: 3}
+    - {fileID: 21300000, guid: c011f880b637bcb4cbcd8774a3b3c733, type: 3}
+    - {fileID: 21300000, guid: d2fe4a02c897aa84e8d80f2a48701b1a, type: 3}
+    - {fileID: 21300000, guid: 33b8381a36ec28d4cbbf2cf116de55de, type: 3}
+    - {fileID: 21300000, guid: edde271f56f81694cb316c3fae8a5768, type: 3}
+    - {fileID: 21300000, guid: 79b1512be5a484d49b6e42710cf9b8e2, type: 3}
+    - {fileID: 21300000, guid: 94070b631d937da489501e8d44e9f366, type: 3}
+    - {fileID: 21300000, guid: a3d992c2ea633f54d84c12f7ba128b70, type: 3}
+    - {fileID: 21300000, guid: 763418b9282af354792ff701b6ce6c00, type: 3}
+    - {fileID: 21300000, guid: 6dd93af3e3055864cb8292e6925f417f, type: 3}
+    - {fileID: 21300000, guid: cf51e4b6244799c44bfad62947fad4a7, type: 3}
+    - {fileID: 21300000, guid: cd249a48902a49945b83f425b64efb95, type: 3}
+    - {fileID: 21300000, guid: 661eb0058bc255e40977b9aafe3030de, type: 3}
     - {fileID: 21300000, guid: 6f3bd07fd40754044a44b0692db73fb7, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.016666668
+    m_StopTime: 0.5
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
     m_HasAdditiveReferencePose: 0
-    m_LoopTime: 0
-    m_LoopBlend: 0
+    m_LoopTime: 1
+    m_LoopBlend: 1
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0
     m_LoopBlendPositionXZ: 0
@@ -477,6 +534,27 @@ AnimationClip:
       m_RotationOrder: 4
     attribute: m_FlipY
     path: Gun
+    classID: 212
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_FlipX
+    path: Player_sprites/Feet
     classID: 212
     script: {fileID: 0}
     flags: 0
