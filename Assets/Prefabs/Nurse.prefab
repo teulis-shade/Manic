@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7459293943901140167}
   - component: {fileID: 2506621052837717023}
-  - component: {fileID: 7119111826564579310}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -85,20 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7119111826564579310
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2901583381908020698}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c29cff538c195c249b69c6f2236de67b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Library: []
-  m_SpriteLibraryAsset: {fileID: 0}
 --- !u!1 &7972197886015110404
 GameObject:
   m_ObjectHideFlags: 0
@@ -111,6 +96,7 @@ GameObject:
   - component: {fileID: 1581843463720402264}
   - component: {fileID: 3805229827452037890}
   - component: {fileID: 4795309397446881673}
+  - component: {fileID: 3454564279469783967}
   m_Layer: 0
   m_Name: Nurse
   m_TagString: Untagged
@@ -220,3 +206,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.62310886, y: 1.7020316}
   m_EdgeRadius: 0
+--- !u!95 &3454564279469783967
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7972197886015110404}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 76e89b070fc02b6418296990e84df88a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
