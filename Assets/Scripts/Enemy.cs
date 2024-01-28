@@ -139,7 +139,7 @@ abstract public class Enemy : MonoBehaviour
 
     public virtual bool CheckMeleeable()
     {
-        return true;
+        return GetComponent<Body>() == null || !GetComponent<Body>().enabled;
     }
 
     public virtual void Melee()
