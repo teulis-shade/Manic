@@ -147,6 +147,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  maxSanity: 1
+  gasGain: 1
 --- !u!50 &5896882393368531544
 Rigidbody2D:
   serializedVersion: 4

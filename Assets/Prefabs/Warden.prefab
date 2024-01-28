@@ -133,7 +133,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  maxSanity: 0
+  maxSanity: 1
+  gasGain: 1
 --- !u!61 &3773091899092817090
 BoxCollider2D:
   m_ObjectHideFlags: 0
