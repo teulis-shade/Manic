@@ -36,6 +36,8 @@ public class PlayerController : MonoBehaviour
     //sprites
     //[SerializeField] private SpriteRenderer face;
     private SpriteRenderer gunSprite;
+    public AudioClip normalMusic;
+    public AudioClip zootedMusic;
 
     private void Start()
     {
@@ -96,6 +98,17 @@ public class PlayerController : MonoBehaviour
         } else {
             gunSprite.sortingOrder = 1;
         }
+
+        //if (Random.Range(1,8192) == 1){
+        Flicker(Random.Range(0f,1f) > sanity/maxSanity);
+        // if (Random.Range(0,1) > sanity/maxSanity){
+        //     print("pizza");
+        //     Flicker(true);
+
+        // }else{
+        //     Flicker(false);
+        // }
+        
     }
 
     public void OnAttack(InputAction.CallbackContext ctx)
@@ -197,5 +210,30 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void Flicker(bool flicker){
+        print(flicker);
+        foreach (Enemy enemy in Resources.FindObjectsOfTypeAll<Enemy>())
+        {
+            enemy.Flicker(flicker);
+        }
+        if (!flicker)
+        {
+            float clip_time = Camera.main.GetComponent<AudioSource>().time;
+            Camera.main.GetComponent<AudioSource>().clip = normalMusic;
+            
+            Camera.main.GetComponent<AudioSource>().Play();
+            Camera.main.GetComponent<AudioSource>().time = clip_time;
+        }else {
+            float clip_time = Camera.main.GetComponent<AudioSource>().time;
+            Camera.main.GetComponent<AudioSource>().clip = zootedMusic;
+            
+            Camera.main.GetComponent<AudioSource>().Play();
+            Camera.main.GetComponent<AudioSource>().time = clip_time;
+
+        }
+
+
     }
 }

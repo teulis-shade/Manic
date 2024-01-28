@@ -37,15 +37,6 @@ abstract public class Enemy : MonoBehaviour
             // print("attack");
         }
 
-        if (insaneModeSprite != null && normalSprite != null) {
-            if (sanity < insaneModeSanity) {
-                normalSprite.enabled = false;
-                insaneModeSprite.enabled = true;
-            } else {
-                normalSprite.enabled = true;
-                insaneModeSprite.enabled = false;
-            }
-        }
     }
 
     void GoToPlayer(){
@@ -55,6 +46,25 @@ abstract public class Enemy : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, step);
         var moveDirection = (player.transform.position - transform.position).normalized;
         animator.SetFloat("X", moveDirection.x);
+    }
+
+    public void Flicker(bool flicker)
+    {
+        if (insaneModeSprite != null && normalSprite != null) 
+        {
+            //if (sanity < insaneModeSanity) 
+            if (flicker) 
+            {
+                normalSprite.enabled = false;
+                insaneModeSprite.enabled = true;
+            } 
+            else 
+            {
+                normalSprite.enabled = true;
+                insaneModeSprite.enabled = false;
+            }
+        }
+
     }
 
     public void LoseSanity(float sanity)
