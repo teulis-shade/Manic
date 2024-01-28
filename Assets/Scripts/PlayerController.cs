@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     private bool moving = false;
     private bool charging = false;
     private bool firing = false;
+    private bool grabbing = false;
+    private Body grabbedBody = null;
     private Vector2 movement = Vector2.zero;
     [SerializeField] private float speed;
     [SerializeField] private float chargingSpeed;
@@ -83,6 +85,10 @@ public class PlayerController : MonoBehaviour
             bulletCharger.StopCharging();
             currentCharge = 0f;
         }
+        if (grabbing & grabbedBody != null)
+        {
+            grabbedBody.transform.position = transform.position;
+        }
 
         // Hide gun if the animation if going upwards
         if (occultGun) {
@@ -94,15 +100,22 @@ public class PlayerController : MonoBehaviour
 
     public void OnAttack(InputAction.CallbackContext ctx)
     {
-        if (ctx.performed)
+        if (ctx.performed & grabbing & grabbedBody != null)
+        {
+            grabbedBody.Thrown(aimingDirection);
+            grabbing = false;
+            grabbedBody = null;
+        }
+        else if (ctx.performed && !grabbing)
         {
             charging = true;
         }
-        else if (ctx.canceled && charging)
+        else if (ctx.canceled && charging && !grabbing)
         {
             charging = false;
             firing = true;
         }
+        
     }
     public void OnAim(InputAction.CallbackContext ctx)
     {
@@ -163,6 +176,23 @@ public class PlayerController : MonoBehaviour
                 sanity = maxSanity;
             }
             yield return new WaitForSeconds(.01f);
+        }
+    }
+
+    public void OnGrab(InputAction.CallbackContext ctx)
+    {
+        if (ctx.performed && !grabbing && !charging)
+        {
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, meleeRadius);
+            foreach (Collider2D collider in colliders)
+            {
+                if (collider.GetComponent<Body>() != null)
+                {
+                    grabbing = true;
+                    grabbedBody = collider.GetComponent<Body>();
+                    break;
+                }
+            }
         }
     }
 }
