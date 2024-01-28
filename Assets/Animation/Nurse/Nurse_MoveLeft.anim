@@ -30,8 +30,20 @@ AnimationClip:
         weightedMode: 0
         inWeight: 0
         outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_FlipX
+    path: Sprite
+    classID: 212
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
       - serializedVersion: 3
-        time: 0.5
+        time: 0
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -43,7 +55,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_FlipX
-    path: Sprite
+    path: InsaneSprite
     classID: 212
     script: {fileID: 0}
     flags: 0
@@ -60,6 +72,21 @@ AnimationClip:
       value: {fileID: 21300000, guid: f18f751b985f3ad42973d8b581558301, type: 3}
     attribute: m_Sprite
     path: Sprite
+    classID: 212
+    script: {fileID: 0}
+    flags: 2
+  - serializedVersion: 2
+    curve:
+    - time: 0
+      value: {fileID: 21300000, guid: 3fa9a30f7547dfb4a841ddf274e7117f, type: 3}
+    - time: 0.125
+      value: {fileID: 21300000, guid: 8635761328efbe448983c70bdd0fc73b, type: 3}
+    - time: 0.25
+      value: {fileID: 21300000, guid: 95968c56c376f2e46839f6f9fcdbbd8c, type: 3}
+    - time: 0.375
+      value: {fileID: 21300000, guid: 357c9bb7728ccc34ca41bb23dee8d629, type: 3}
+    attribute: m_Sprite
+    path: InsaneSprite
     classID: 212
     script: {fileID: 0}
     flags: 2
@@ -80,7 +107,25 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
+      path: 491235212
+      attribute: 555744692
+      script: {fileID: 0}
+      typeID: 212
+      customType: 0
+      isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
       path: 850496168
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 491235212
       attribute: 0
       script: {fileID: 0}
       typeID: 212
@@ -93,6 +138,10 @@ AnimationClip:
     - {fileID: 21300000, guid: bf434a7c752bb3940934d4c10fa2aff0, type: 3}
     - {fileID: 21300000, guid: c47ec153843a2a249a7abfe01cf4673d, type: 3}
     - {fileID: 21300000, guid: f18f751b985f3ad42973d8b581558301, type: 3}
+    - {fileID: 21300000, guid: 3fa9a30f7547dfb4a841ddf274e7117f, type: 3}
+    - {fileID: 21300000, guid: 8635761328efbe448983c70bdd0fc73b, type: 3}
+    - {fileID: 21300000, guid: 95968c56c376f2e46839f6f9fcdbbd8c, type: 3}
+    - {fileID: 21300000, guid: 357c9bb7728ccc34ca41bb23dee8d629, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -127,8 +176,20 @@ AnimationClip:
         weightedMode: 0
         inWeight: 0
         outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_FlipX
+    path: Sprite
+    classID: 212
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
       - serializedVersion: 3
-        time: 0.5
+        time: 0
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -140,7 +201,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_FlipX
-    path: Sprite
+    path: InsaneSprite
     classID: 212
     script: {fileID: 0}
     flags: 0
