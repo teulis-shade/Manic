@@ -112,7 +112,7 @@ abstract public class Enemy : MonoBehaviour
 
     }
 
-    public void LoseSanity(float sanity)
+    public virtual void LoseSanity(float sanity)
     {
         this.sanity -= sanity;
         if (this.sanity < 0)
@@ -140,7 +140,7 @@ abstract public class Enemy : MonoBehaviour
         }
     }
 
-    public void OnCollisionEnter2D(Collision2D collision)
+    public virtual void OnCollisionEnter2D(Collision2D collision)
     {
         //if (collision.otherCollider.GetComponent<PlayerController>() != null)
         if (collision.collider.GetComponent<PlayerController>() != null)

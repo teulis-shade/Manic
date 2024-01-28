@@ -569,6 +569,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bullet
       objectReference: {fileID: 0}
+    - target: {fileID: 2752918610104367292, guid: e7c2818d357933442af7ada3e831c832, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2752918610104367292, guid: e7c2818d357933442af7ada3e831c832, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2752918610104367292, guid: e7c2818d357933442af7ada3e831c832, type: 3}
+      propertyPath: m_Color.r
+      value: 0.12171376
+      objectReference: {fileID: 0}
     - target: {fileID: 9155319448744050549, guid: e7c2818d357933442af7ada3e831c832, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.3

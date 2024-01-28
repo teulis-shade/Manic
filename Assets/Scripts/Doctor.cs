@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Doctor : Enemy
@@ -27,6 +28,67 @@ public class Doctor : Enemy
       
     }*/
 
+    public override void LoseSanity(float sanity)
+    {
+        //only lose sanity with mask
+        if (!maskOn){
+            base.LoseSanity(sanity);
+            // this.sanity -= sanity;
+            // if (this.sanity < 0)
+            // {
+            //     this.sanity = 0;
+            // }
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.GetComponent<Enemy>() != null && col.GetComponent<Enemy>().enabled == false){
+            maskOn = false;
+        }
+
+        // List<Object> finalList = new List<Object>();
+        // string nameToLookFor = "name of game object";
+
+        // for(var i = 0; i < firstList.Length; i++)
+        // {
+        //     if(firstList[i].gameObject.name == nameToLookFor)
+        //     {
+        //         finalList.Add(firstList[i]);
+        //     }
+        // }
+
+
+        // if (spriteRenderer.enabled && col.GetComponent<PlayerController>() != null){
+        //     SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex + 1);
+        // }
+    }
+    
+
+    /*
+    public override void OnCollisionEnter2D(Collision2D collision)
+    {
+        print("asdf");
+        print(collision.collider.GetComponent<Enemy>());
+        print(collision.collider.GetComponent<Enemy>().enabled);
+
+        //if collide with body and have no mask lose mask, can take damage
+        if (collision.collider.GetComponent<Enemy>() != null && collision.collider.GetComponent<Enemy>().enabled == false){
+            maskOn = false;
+        }
+            // Enemy[] enemyList = FindObjectsOfType<Enemy>();
+
+            // int dead_cnt = 0;
+            // foreach(Enemy enemy in enemyList)
+            // {
+            //     //if enemy dead
+            //     if (enemy.GetComponent<Enemy>().enabled == false){
+
+        //if (collision.otherCollider.GetComponent<PlayerController>() != null)
+
+
+
+    }*/
 
 
     public override void Collision()
@@ -35,6 +97,25 @@ public class Doctor : Enemy
         /*
         if (attack){
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }*/
+    }
+
+
+    public override void Melee()
+    {
+        if (!maskOn){
+            base.Melee();
+        }
+        /*
+        FindObjectOfType<Meter>().GainMeter(gasGain * (1 - sanity / maxSanity));
+        if (GetComponent<Body>() != null)
+        {
+            GetComponent<Enemy>().enabled = false;
+            GetComponent<Body>().enabled = true;
+            GetComponent<BoxCollider2D>().isTrigger = true;
+        } else
+        {
+            Destroy(this.gameObject);
         }*/
     }
 
