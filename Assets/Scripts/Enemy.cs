@@ -96,13 +96,17 @@ abstract public class Enemy : MonoBehaviour
             {
                 normalSprite.enabled = false;
                 insaneModeSprite.enabled = true;
-                if (GetComponent<Body>().enabled == true){ insaneModeSprite.GetComponent<SpriteRenderer>().color = Color.green;}
+                if (insaneModeSprite.GetComponent<SpriteRenderer>() != null){
+                    if (GetComponent<Body>().enabled == true){ insaneModeSprite.GetComponent<SpriteRenderer>().color = Color.green;}
+                }
             } 
             else 
             {
                 normalSprite.enabled = true;
                 insaneModeSprite.enabled = false;
-                if (GetComponent<Body>().enabled == true){ normalSprite.GetComponent<SpriteRenderer>().color = Color.green;}
+                if (normalSprite.GetComponent<SpriteRenderer>() != null){
+                    if (GetComponent<Body>().enabled == true){ normalSprite.GetComponent<SpriteRenderer>().color = Color.green;}
+                }
             }
         }
 
