@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float chargingSpeed;
     [SerializeField] private GameObject gun;
     [SerializeField] private float scale;
+    [SerializeField] private float meleeRadius;
     [HideInInspector] [SerializeField] private bool occultGun;
     private float currentCharge = 0f;
     private Bullet bullet;
@@ -106,6 +107,26 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("X", aimingDirection.x);
         animator.SetFloat("Y", aimingDirection.y);
         gun.transform.localRotation = Quaternion.LookRotation(Vector3.forward, new Vector3(aimingDirection.y, -aimingDirection.x, 0f));
+    }
+
+    public void OnMelee(InputAction.CallbackContext ctx)
+    {
+        if (!ctx.performed)
+        {
+            return;
+        }
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, meleeRadius);
+        foreach (Collider2D collider in colliders)
+        {
+            if (collider.GetComponent<Enemy>() != null)
+            {
+                if (collider.GetComponent<Enemy>().CheckMeleeable())
+                {
+                    collider.GetComponent<Enemy>().Melee();
+                    break;
+                }
+            }
+        }
     }
 
     public void ReduceSanity(float loss)

@@ -24,6 +24,10 @@ public class Meter : MonoBehaviour
         {
             meterPreview.fillAmount = 1;
         }
+        if (meterPreview.fillAmount < 0)
+        {
+            meterPreview.fillAmount = 0;
+        }
         return meterPreview.fillAmount - meterOutPercent;
     }
 
@@ -35,6 +39,12 @@ public class Meter : MonoBehaviour
 
     public void GainMeter(float percent)
     {
+        if (percent > meterOutPercent)
+        {
+            percent = meterOutPercent;
+        }
         meterOutPercent -= percent;
+        meterOut.fillAmount = meterOutPercent;
+        meterPreview.fillAmount -= percent;
     }
 }

@@ -9,6 +9,7 @@ abstract public class Enemy : MonoBehaviour
     private PlayerController player;
 
     [SerializeField] float maxSanity;
+    [SerializeField] float gasGain;
     float sanity;
 
 
@@ -48,5 +49,16 @@ abstract public class Enemy : MonoBehaviour
         {
             this.sanity = 0;
         }
+    }
+
+    public virtual bool CheckMeleeable()
+    {
+        return true;
+    }
+
+    public virtual void Melee()
+    {
+        FindObjectOfType<Meter>().GainMeter(gasGain * (1 - sanity / maxSanity));
+        Destroy(this.gameObject);
     }
 }

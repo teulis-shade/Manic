@@ -2746,6 +2746,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5677444981109407012, guid: 46a99d8ce1d96114980a0fb6403c0049, type: 3}
+      propertyPath: meleeRadius
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2759,6 +2763,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1581843463720402264, guid: 7d512f3fd9e86644aba8cf3feff43e68, type: 3}
+      propertyPath: gasGain
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7391514969488298767, guid: 7d512f3fd9e86644aba8cf3feff43e68, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.29
@@ -2816,6 +2824,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 978328992742544718, guid: 892f3df1d59c81d4bb836a3df511f966, type: 3}
+      propertyPath: gasGain
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1825414042681658545, guid: 892f3df1d59c81d4bb836a3df511f966, type: 3}
       propertyPath: m_Name
       value: Doctor
@@ -2912,6 +2924,10 @@ PrefabInstance:
     - target: {fileID: 815878958732350584, guid: 425b647ce9db48c4196f84962acf7492, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451279263110806741, guid: 425b647ce9db48c4196f84962acf7492, type: 3}
+      propertyPath: gasGain
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2698684537866038449, guid: 425b647ce9db48c4196f84962acf7492, type: 3}
       propertyPath: m_Name
