@@ -166,7 +166,7 @@ public class PlayerController : MonoBehaviour
         }
 
         //if (Random.Range(1,8192) == 1){
-        Flicker(Random.Range(0f,1f) > sanity/maxSanity);
+        Flicker(Random.Range(0f,1.5f) > sanity/maxSanity);
         // if (Random.Range(0,1) > sanity/maxSanity){
         //     print("pizza");
         //     Flicker(true);
