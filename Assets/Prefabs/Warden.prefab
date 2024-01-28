@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56e7d0b5d88ade14fa737470a3d2e531, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 2
   attackRange: 4
   maxSanity: 1
   gasGain: 1
@@ -140,6 +140,11 @@ MonoBehaviour:
   normalSprite: {fileID: 0}
   insaneModeSprite: {fileID: 0}
   attack: 0
+  weapon: {fileID: 0}
+  attackTime: 1
+  attackSpeed: 1
+  attackCooldownTime: 3
+  cooldownSpeed: 1
 --- !u!61 &3773091899092817090
 BoxCollider2D:
   m_ObjectHideFlags: 0
