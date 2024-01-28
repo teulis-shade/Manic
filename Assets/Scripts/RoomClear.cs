@@ -67,7 +67,7 @@ public class RoomClear : MonoBehaviour
 
 
         if (spriteRenderer.enabled && col.GetComponent<PlayerController>() != null){
-            SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
         //Debug.Log(col.gameObject.name + " : " + gameObject.name + " : " + Time.time);
         //spriteMove = -0.1f;
