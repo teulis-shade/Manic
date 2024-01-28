@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Pathfinding;
 
 abstract public class Enemy : MonoBehaviour
 {
@@ -11,7 +12,7 @@ abstract public class Enemy : MonoBehaviour
     //private float ogSpeed = speed;
     public float attackRange = 2f;
     public PlayerController player;
-
+    private AIPath aiPath;
     [SerializeField] float maxSanity;
     [SerializeField] float gasGain;
     [SerializeField] float insaneModeSanity = 0.1f;
@@ -48,6 +49,7 @@ abstract public class Enemy : MonoBehaviour
         sanity = maxSanity;
 
         ogSpeed = speed;
+        aiPath = GetComponent<AIPath>();
     }
 
     // Update is called once per frame
@@ -80,10 +82,11 @@ abstract public class Enemy : MonoBehaviour
     }
 
     void GoToPlayer(){
-        float step = speed * Time.deltaTime * (sanity / maxSanity);
-
+        //float step = speed * Time.deltaTime * (sanity / maxSanity);
+        float curSpeed = speed * (sanity / maxSanity);
         // move sprite towards the target location
-        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, step);
+        //transform.position = Vector2.MoveTowards(transform.position, player.transform.position, step);
+        aiPath.maxSpeed = curSpeed;
         var moveDirection = (player.transform.position - transform.position).normalized;
         animator.SetFloat("X", moveDirection.x);
     }
