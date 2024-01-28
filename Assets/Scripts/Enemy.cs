@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 abstract public class Enemy : MonoBehaviour
 {
     public float speed = 10f;
+    //private float ogSpeed = speed;
     public float attackRange = 2f;
     private PlayerController player;
 
@@ -22,8 +23,19 @@ abstract public class Enemy : MonoBehaviour
 
     public bool attack;
 
+    private float ogSpeed;
+    
+
+    //ATTACK 
     public float attackTime = 1f;
+    public float attackSpeed = 1f;
     private Coroutine attackCoroutine;
+
+    //ATTACK COOLDOWN
+    private Coroutine attackCooldownCoroutine;
+    public float attackCooldownTime = 1f;
+    public float cooldownSpeed = 1f;
+
 
     void Start()
     {
@@ -34,6 +46,8 @@ abstract public class Enemy : MonoBehaviour
             maxSanity = 1f;
         }
         sanity = maxSanity;
+
+        ogSpeed = speed;
     }
 
     // Update is called once per frame
@@ -46,7 +60,7 @@ abstract public class Enemy : MonoBehaviour
             //if (attackCoroutine == null)
             //{
             //GoToPlayer();
-            if (attackCoroutine == null)
+            if (attackCoroutine == null && attackCooldownCoroutine == null)
             {
                 attackCoroutine = StartCoroutine(Attack(attackTime));
                 //StopCoroutine(grappleCoroutine);
@@ -156,15 +170,30 @@ abstract public class Enemy : MonoBehaviour
     private IEnumerator Attack(float attackTime)
     {
         //set attack speed
-        speed = 2f;
+        speed = attackSpeed;
         attack = true; //now u vulnerable
 
         yield return new WaitForSeconds(attackTime);
 
         //set back to normal
-        attack = false; //make cooldown tbh
-        speed = 4f;
+        attackCooldownCoroutine = StartCoroutine(AttackCooldown(attackCooldownTime));
+        //speed = 4f;
         attackCoroutine = null;
+        yield return null;
+
+    }
+
+
+    private IEnumerator AttackCooldown(float cooldownTime)
+    {
+        attack = false; //make cooldown tbh
+        speed = cooldownSpeed;
+        //attackCooldownCoroutine
+        yield return new WaitForSeconds(attackCooldownTime);
+
+
+        speed = ogSpeed; 
+        attackCooldownCoroutine = null;
         yield return null;
 
     }
