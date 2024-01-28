@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
@@ -9,6 +10,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] float fallOff;
     [SerializeField] float speed;
     [SerializeField] GameObject explosionPrefab;
+    [SerializeField] SpriteRenderer balloon;
     public void StartFiring(float charge, Vector2 movement, Vector3 start)
     {
         gameObject.SetActive(true);
@@ -17,6 +19,8 @@ public class Bullet : MonoBehaviour
         transform.rotation = Quaternion.LookRotation(Vector3.forward, movement);
         this.charge = charge;
         direction = movement;
+        //balloon.color = Color.red;
+        balloon.color = FindObjectOfType<BulletCharger>().GetComponent<SpriteRenderer>().color;
     }
 
     private void Update()
