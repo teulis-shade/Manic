@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.UI;
 using UnityEngine;
 
 public class Warden : Enemy
@@ -26,6 +27,31 @@ public class Warden : Enemy
 
         }else{
             weapon.GetComponent<SpriteRenderer>().enabled = false;
+        }
+
+        if (sanity < 0.5){
+            //SHOW CAN BE MELEED
+        }else{
+            //SHOW CANNOT BE MELEED
+        }
+    }
+
+    public override void Melee()
+    {
+        print(sanity);
+        //SHOW THIS SOMEHWERE
+        if (sanity < 0.5){
+            base.Melee();
+            // FindObjectOfType<Meter>().GainMeter(gasGain * (1 - sanity / maxSanity));
+            // if (GetComponent<Body>() != null)
+            // {
+            //     GetComponent<Enemy>().enabled = false;
+            //     GetComponent<Body>().enabled = true;
+            //     GetComponent<BoxCollider2D>().isTrigger = true;
+            // } else
+            // {/*warden dieee*/
+            //     Destroy(this.gameObject);
+            // }
         }
     }
 }

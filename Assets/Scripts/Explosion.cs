@@ -33,7 +33,7 @@ public class Explosion : MonoBehaviour
     {
         foreach (Enemy enemy in enemySanity)
         {
-            Debug.Log(enemy.gameObject.name);
+            //Debug.Log(enemy.gameObject.name);
             enemy.LoseSanity(sanityLoss * Time.deltaTime);
         }
         if (playerInside != null)

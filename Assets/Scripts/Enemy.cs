@@ -17,7 +17,7 @@ abstract public class Enemy : MonoBehaviour
     [SerializeField] float insaneModeSanity = 0.1f;
     [SerializeField] SpriteRenderer normalSprite;
     [SerializeField] SpriteRenderer insaneModeSprite;
-    float sanity;   
+    public float sanity;   
 
     private Animator animator;
 
@@ -53,6 +53,7 @@ abstract public class Enemy : MonoBehaviour
     // Update is called once per frame
     public virtual void Update()
     {
+        //print(sanity);
         //wardens *** too fat
        //if 
 
