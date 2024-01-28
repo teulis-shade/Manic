@@ -104,7 +104,10 @@ abstract public class Enemy : MonoBehaviour
                 normalSprite.enabled = false;
                 insaneModeSprite.enabled = true;
                 if (insaneModeSprite.GetComponent<SpriteRenderer>() != null){
-                    if (GetComponent<Body>() != null && GetComponent<Body>().enabled == true){ insaneModeSprite.GetComponent<SpriteRenderer>().color = Color.green;}
+                    if (GetComponent<Body>() != null && GetComponent<Body>().enabled == true){ insaneModeSprite.GetComponent<SpriteRenderer>().color = Color.green;
+                    }else{
+                        insaneModeSprite.GetComponent<SpriteRenderer>().color = Color.white;
+                    }
                 }
             } 
             else 
@@ -113,7 +116,9 @@ abstract public class Enemy : MonoBehaviour
                 insaneModeSprite.enabled = false;
                 if (normalSprite.GetComponent<SpriteRenderer>() != null){
                     //if (GetComponent<Body>() != null)
-                    if (GetComponent<Body>() != null && GetComponent<Body>().enabled == true){ normalSprite.GetComponent<SpriteRenderer>().color = Color.green;}
+                    if (GetComponent<Body>() != null && GetComponent<Body>().enabled == true){ normalSprite.GetComponent<SpriteRenderer>().color = Color.green;}else{
+                        normalSprite.GetComponent<SpriteRenderer>().color = Color.white;
+                    }
                 }
             }
         }
