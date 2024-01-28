@@ -266,6 +266,7 @@ GameObject:
   - component: {fileID: 4795309397446881673}
   - component: {fileID: 3454564279469783967}
   - component: {fileID: 130401481873341450}
+  - component: {fileID: 2546409873979203704}
   m_Layer: 0
   m_Name: Nurse
   m_TagString: Untagged
@@ -410,6 +411,21 @@ Animator:
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &130401481873341450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7972197886015110404}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c42738542f46d4e4a8a7146e3466acd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpeed: 30
+  falloff: 7.5
+  curSpeed: 0
+--- !u!114 &2546409873979203704
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -17,4 +17,15 @@ public class Doctor : Enemy
     {
       
     }*/
+    public override void Update()
+    {
+        base.Update();
+        
+        if (attack){
+            weapon.GetComponent<SpriteRenderer>().enabled = true;
+
+        }else{
+            weapon.GetComponent<SpriteRenderer>().enabled = false;
+        }
+    }
 }
