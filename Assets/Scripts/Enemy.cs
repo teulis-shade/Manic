@@ -74,6 +74,14 @@ abstract public class Enemy : MonoBehaviour
     public virtual void Melee()
     {
         FindObjectOfType<Meter>().GainMeter(gasGain * (1 - sanity / maxSanity));
-        Destroy(this.gameObject);
+        if (GetComponent<Body>() != null)
+        {
+            GetComponent<Enemy>().enabled = false;
+            GetComponent<Body>().enabled = true;
+            GetComponent<BoxCollider2D>().isTrigger = true;
+        } else
+        {/*warden dieee*/
+            Destroy(this.gameObject);
+        }
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Doctor : Enemy
 {
-    
+    [SerializeField] private bool maskOn;
     /*
     void Start()
     {

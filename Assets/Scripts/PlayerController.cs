@@ -188,9 +188,12 @@ public class PlayerController : MonoBehaviour
             {
                 if (collider.GetComponent<Body>() != null)
                 {
-                    grabbing = true;
-                    grabbedBody = collider.GetComponent<Body>();
-                    break;
+                    if (collider.GetComponent<Body>().enabled == true)
+                    {
+                        grabbing = true;
+                        grabbedBody = collider.GetComponent<Body>();
+                        break;
+                    }
                 }
             }
         }
