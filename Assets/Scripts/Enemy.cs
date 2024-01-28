@@ -214,5 +214,10 @@ abstract public class Enemy : MonoBehaviour
         yield return null;
 
     }
+
+    public void BodyHit() 
+    {
+        sanity -= .25f;
+    }
 }
 
