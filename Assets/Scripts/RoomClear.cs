@@ -20,9 +20,7 @@ public class RoomClear : MonoBehaviour
         //gotta check for loop all enemies and that none of them have main script
         if (spriteRenderer.enabled == false){
             Enemy[] enemyList = FindObjectsOfType<Enemy>();
-            print(enemyList);
-            print(enemyList.Length);
-    
+
             int dead_cnt = 0;
             foreach(Enemy enemy in enemyList)
             {
@@ -30,8 +28,7 @@ public class RoomClear : MonoBehaviour
                 if (enemy.GetComponent<Enemy>().enabled == false){
                     dead_cnt += 1;
                 }
-                print(enemy.GetComponent<Enemy>().enabled);
-                print(enemy);
+
                 //objet.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, alphaLevel);
             }
 
