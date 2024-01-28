@@ -1,3 +1,4 @@
+using Pathfinding;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,11 +9,12 @@ public class Body : MonoBehaviour
     [SerializeField] private float maxSpeed;
     [SerializeField] private float falloff;
     [SerializeField] private float curSpeed;
+    private AIPath aiPath;
 
-    // public void Start(){
-    //     GetComponent<
-
-    // }
+    public void Start(){
+        aiPath = GetComponent<AIPath>();
+        aiPath.enabled = false;
+    }
 
     public void Thrown(Vector2 movement)
     {
