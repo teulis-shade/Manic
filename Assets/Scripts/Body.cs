@@ -39,9 +39,14 @@ public class Body : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.GetComponent<PlayerController>() == null && other.GetComponent<CameraBound>() == null)
+        if (other.GetComponent<PlayerController>() == null && other.GetComponent<BoxCollider2D>() != null && !other.GetComponent<BoxCollider2D>().isTrigger)
         {
             curSpeed = 0;
+            if (other.GetComponent<Enemy>() != null)
+            {
+                Debug.Log("Hit");
+                other.GetComponent<Enemy>().BodyHit();
+            }
         }
     }
 }
