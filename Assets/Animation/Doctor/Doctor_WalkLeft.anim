@@ -23,15 +23,6 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 0.5
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -44,6 +35,27 @@ AnimationClip:
       m_RotationOrder: 4
     attribute: m_FlipX
     path: Sprite
+    classID: 212
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_FlipX
+    path: Insane Sprite
     classID: 212
     script: {fileID: 0}
     flags: 0
@@ -60,6 +72,21 @@ AnimationClip:
       value: {fileID: 21300000, guid: ab827a1c6c46e1a44ae135818cb18de1, type: 3}
     attribute: m_Sprite
     path: Sprite
+    classID: 212
+    script: {fileID: 0}
+    flags: 2
+  - serializedVersion: 2
+    curve:
+    - time: 0
+      value: {fileID: 21300000, guid: ee7a40b86fd1dcc449c4ddd0194721c8, type: 3}
+    - time: 0.125
+      value: {fileID: 21300000, guid: f6073de97cd88f3499e9c098ded951ff, type: 3}
+    - time: 0.25
+      value: {fileID: 21300000, guid: 047748458a23f024aa11656f77aed39a, type: 3}
+    - time: 0.375
+      value: {fileID: 21300000, guid: b85566b9bd892674497ec96f4c4bb625, type: 3}
+    attribute: m_Sprite
+    path: Insane Sprite
     classID: 212
     script: {fileID: 0}
     flags: 2
@@ -80,7 +107,25 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
+      path: 3985563413
+      attribute: 555744692
+      script: {fileID: 0}
+      typeID: 212
+      customType: 0
+      isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
       path: 850496168
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 3985563413
       attribute: 0
       script: {fileID: 0}
       typeID: 212
@@ -93,6 +138,10 @@ AnimationClip:
     - {fileID: 21300000, guid: df82a54c037d8a046966d38f0e04a146, type: 3}
     - {fileID: 21300000, guid: 6f208a3e1e95f8a4bb28b6d9538fd694, type: 3}
     - {fileID: 21300000, guid: ab827a1c6c46e1a44ae135818cb18de1, type: 3}
+    - {fileID: 21300000, guid: ee7a40b86fd1dcc449c4ddd0194721c8, type: 3}
+    - {fileID: 21300000, guid: f6073de97cd88f3499e9c098ded951ff, type: 3}
+    - {fileID: 21300000, guid: 047748458a23f024aa11656f77aed39a, type: 3}
+    - {fileID: 21300000, guid: b85566b9bd892674497ec96f4c4bb625, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -120,15 +169,6 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 0.5
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -141,6 +181,27 @@ AnimationClip:
       m_RotationOrder: 4
     attribute: m_FlipX
     path: Sprite
+    classID: 212
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_FlipX
+    path: Insane Sprite
     classID: 212
     script: {fileID: 0}
     flags: 0
