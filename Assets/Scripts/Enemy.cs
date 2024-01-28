@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 abstract public class Enemy : MonoBehaviour
 {
     public float speed = 10f;
+    public float attackRange = 2f;
     private PlayerController player;
 
     [SerializeField] float maxSanity;
@@ -13,9 +16,14 @@ abstract public class Enemy : MonoBehaviour
     [SerializeField] float insaneModeSanity = 0.1f;
     [SerializeField] SpriteRenderer normalSprite;
     [SerializeField] SpriteRenderer insaneModeSprite;
-    float sanity;
+    float sanity;   
 
     private Animator animator;
+
+    public bool attack;
+
+    public float attackTime = 1f;
+    private Coroutine attackCoroutine;
 
     void Start()
     {
@@ -31,11 +39,28 @@ abstract public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector2.Distance(transform.position, player.transform.position) > 2f){
-            GoToPlayer();
-        }else{
-            // print("attack");
-        }
+        //wardens *** too fat
+       //if 
+
+        if (Vector2.Distance(transform.position, player.transform.position) < attackRange){
+            //if (attackCoroutine == null)
+            //{
+            //GoToPlayer();
+            if (attackCoroutine == null)
+            {
+                attackCoroutine = StartCoroutine(Attack(attackTime));
+                //StopCoroutine(grappleCoroutine);
+            }
+            
+            //}
+        }//else{
+
+            //if attackAnimation is not playing (start attack animation, that way this would not be retriggered)
+            //attack = true;
+            
+            //grappleCoroutine = StartCoroutine(Grappling(collider));
+        //}
+        GoToPlayer();
 
     }
 
@@ -57,11 +82,13 @@ abstract public class Enemy : MonoBehaviour
             {
                 normalSprite.enabled = false;
                 insaneModeSprite.enabled = true;
+                if (GetComponent<Body>().enabled == true){ insaneModeSprite.GetComponent<SpriteRenderer>().color = Color.green;}
             } 
             else 
             {
                 normalSprite.enabled = true;
                 insaneModeSprite.enabled = false;
+                if (GetComponent<Body>().enabled == true){ normalSprite.GetComponent<SpriteRenderer>().color = Color.green;}
             }
         }
 
@@ -94,4 +121,52 @@ abstract public class Enemy : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        //if (collision.otherCollider.GetComponent<PlayerController>() != null)
+        if (collision.collider.GetComponent<PlayerController>() != null)
+        {
+            Collision();
+        }
+
+    }
+
+    public virtual void Collision()
+    {
+        if (attack){
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+    }
+
+
+    /*
+    public void Attack(float attackTime)
+    {
+
+
+
+        if (grappleCoroutine != null)
+        {
+            StopCoroutine(grappleCoroutine);
+        }
+        grappleCoroutine = StartCoroutine(Grappling(collider));
+    }*/
+
+    private IEnumerator Attack(float attackTime)
+    {
+        //set attack speed
+        speed = 2f;
+        attack = true; //now u vulnerable
+
+        yield return new WaitForSeconds(attackTime);
+
+        //set back to normal
+        attack = false; //make cooldown tbh
+        speed = 4f;
+        attackCoroutine = null;
+        yield return null;
+
+    }
 }
+

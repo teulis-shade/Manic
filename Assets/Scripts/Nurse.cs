@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Nurse : Enemy
 {
-    
+
     /*
     void Start()
     {
@@ -17,4 +17,6 @@ public class Nurse : Enemy
     {
       
     }*/
+
+    
 }

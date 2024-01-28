@@ -133,8 +133,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  attackRange: 4
   maxSanity: 1
   gasGain: 1
+  insaneModeSanity: 0.1
+  normalSprite: {fileID: 0}
+  insaneModeSprite: {fileID: 0}
+  attack: 0
 --- !u!61 &3773091899092817090
 BoxCollider2D:
   m_ObjectHideFlags: 0

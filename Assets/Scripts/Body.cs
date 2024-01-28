@@ -8,6 +8,12 @@ public class Body : MonoBehaviour
     [SerializeField] private float maxSpeed;
     [SerializeField] private float falloff;
     [SerializeField] private float curSpeed;
+
+    // public void Start(){
+    //     GetComponent<
+
+    // }
+
     public void Thrown(Vector2 movement)
     {
         transform.rotation = Quaternion.LookRotation(Vector3.forward, movement);
