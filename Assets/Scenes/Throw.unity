@@ -2910,7 +2910,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 2083f268e512d6c4e8174534e5626c1b, type: 3}
     - target: {fileID: 5677444981109407012, guid: 46a99d8ce1d96114980a0fb6403c0049, type: 3}
       propertyPath: chargingSpeed
-      value: 0.5
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 5677444981109407012, guid: 46a99d8ce1d96114980a0fb6403c0049, type: 3}
       propertyPath: sanityReduction
@@ -3052,7 +3052,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 978328992742544718, guid: 892f3df1d59c81d4bb836a3df511f966, type: 3}
       propertyPath: attackRange
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1825414042681658545, guid: 892f3df1d59c81d4bb836a3df511f966, type: 3}
       propertyPath: m_Name

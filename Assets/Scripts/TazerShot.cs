@@ -41,9 +41,9 @@ public class TazerShot : MonoBehaviour
             //kill player
             //Destroy(col.gameObject);
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }else{
+        }else if (col.gameObject.GetComponent<Enemy>() != null && col.gameObject.GetComponent<Enemy>().enabled == false){ //kill self with dead body
             //kill self
-            //Destroy(self);
+            Destroy(gameObject);
 
         }
 
