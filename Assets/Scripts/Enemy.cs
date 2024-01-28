@@ -44,7 +44,6 @@ abstract public class Enemy : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, step);
         var moveDirection = (player.transform.position - transform.position).normalized;
         animator.SetFloat("X", moveDirection.x);
-        animator.SetFloat("Y", moveDirection.y);
     }
 
     public void LoseSanity(float sanity)

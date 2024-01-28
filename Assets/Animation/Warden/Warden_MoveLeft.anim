@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Nurse_MoveLeft
+  m_Name: Warden_MoveLeft
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -51,13 +51,13 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 21300000, guid: d95e036dee93de345896cb46027031cc, type: 3}
+      value: {fileID: 21300000, guid: 42b20218c18bbbe4ebf0282179b2ec47, type: 3}
     - time: 0.125
-      value: {fileID: 21300000, guid: bf434a7c752bb3940934d4c10fa2aff0, type: 3}
+      value: {fileID: 21300000, guid: 69a102d21bb88c040bfde70e61f89b87, type: 3}
     - time: 0.25
-      value: {fileID: 21300000, guid: c47ec153843a2a249a7abfe01cf4673d, type: 3}
+      value: {fileID: 21300000, guid: 5c1ac10aba7e6f544a0675f065b7611f, type: 3}
     - time: 0.375
-      value: {fileID: 21300000, guid: f18f751b985f3ad42973d8b581558301, type: 3}
+      value: {fileID: 21300000, guid: a1a7d4d9711e21f448a69459c7559f36, type: 3}
     attribute: m_Sprite
     path: Sprite
     classID: 212
@@ -89,10 +89,10 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 21300000, guid: d95e036dee93de345896cb46027031cc, type: 3}
-    - {fileID: 21300000, guid: bf434a7c752bb3940934d4c10fa2aff0, type: 3}
-    - {fileID: 21300000, guid: c47ec153843a2a249a7abfe01cf4673d, type: 3}
-    - {fileID: 21300000, guid: f18f751b985f3ad42973d8b581558301, type: 3}
+    - {fileID: 21300000, guid: 42b20218c18bbbe4ebf0282179b2ec47, type: 3}
+    - {fileID: 21300000, guid: 69a102d21bb88c040bfde70e61f89b87, type: 3}
+    - {fileID: 21300000, guid: 5c1ac10aba7e6f544a0675f065b7611f, type: 3}
+    - {fileID: 21300000, guid: a1a7d4d9711e21f448a69459c7559f36, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
