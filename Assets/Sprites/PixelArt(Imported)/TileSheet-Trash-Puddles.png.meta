@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -106,9 +106,1219 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 67
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ba3dc6c215d97f4ca8e68cbf8fb2278
+      internalID: -1601396896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_1
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 72
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff34a4d062ec48740ba728c35b0781fa
+      internalID: 1349482456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_2
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 68
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 722212690c0188f4caacb6ec1e96773a
+      internalID: 1230121046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_3
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 69
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ae1eba231ba3d44eb837a8d782662fd
+      internalID: 1855172031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_4
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 62
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab37426b64603374b8d5f4e5585a5c5f
+      internalID: 1089174886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_5
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 67
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 805a288ef71a7d04795e21cdcb6e87af
+      internalID: -726316624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_6
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 71
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f43b5460505ab744c97a40e1b67a6370
+      internalID: 1033593921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_7
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 72
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27cf627a98675074cb3f23971e7aa866
+      internalID: -933529346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_8
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 68
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaeee1a11146d3342932f93680f4a7b5
+      internalID: -1347369219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_9
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 64
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b9103e46026c3c42969e8b4caf1164f
+      internalID: 988101053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_10
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 62
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c9f9fa1a5234c14383cfb802e270cf1
+      internalID: -935785074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_11
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 64
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd9a15846f32f8a4e82e214758bb756d
+      internalID: 839217068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_12
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 61
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec4245083e6de5540acf4af3ec3934bd
+      internalID: -1143208525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_13
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 63
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98509df1791907c469f83bacdb820668
+      internalID: 1912950337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_14
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 63
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81c5addd33a332e4b9f46e9e6144924e
+      internalID: 1855696018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_15
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 63
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06cf59940b66748498bde054251c49e4
+      internalID: 642878231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_16
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 61
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b780f633d766e84cb4653acd9ecaa47
+      internalID: -1327440385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_17
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25314070d8663a54c95323253d4a1442
+      internalID: 261750376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_18
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 48
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab917eb7dd6439a4ea040c1b48326d7b
+      internalID: 1909323885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_19
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 43
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58a082b560dc3164e87fe906b93921a5
+      internalID: -1793645430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_20
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 51
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a98289fa2bfdaa54eb8083d6868c6969
+      internalID: -295602514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_21
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 46
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37900badc0182b240b5f9d25f0a23c79
+      internalID: -477073556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_22
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 50
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 652a470bdeed4b94291b847a61b04ffb
+      internalID: -1741613609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_23
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 47
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ab38b23ce90ca748b7c6caaecc1b688
+      internalID: -86015886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_24
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 52
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6ee8260cfd5a5a43b7bccd652ca0475
+      internalID: -2138542977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_25
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 49
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d960e0d3b0bf44c48a46d7e69db5eb7d
+      internalID: 1313570339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_26
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 46
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e63764fc6825dbb4aa8e5790b3fcaf59
+      internalID: 240711433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_27
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 43
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b706f15aa6ff0b45aacd062812874ab
+      internalID: 1253138480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_28
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 42
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbe63f880aca71a41a99f77f14e0733f
+      internalID: 530302751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_29
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 44
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b5864fc780a08a479807aadc9919b76
+      internalID: 600994188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_30
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 43
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4083f839c40094c4381fe1fef2cd07a6
+      internalID: -378441360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_31
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 43
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07073605746928f44aa52245aeed6241
+      internalID: -1884828279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_32
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 43
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5785fe3983f65ff45bfb20214669297c
+      internalID: -157598492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_33
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 29
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6923ef8ff30b47d49b808a0b9b4b1613
+      internalID: 1286933181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_34
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 30
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfb0205ebc4d5e44e853609d2aa41ccd
+      internalID: -1532598474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_35
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 31
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d34ab0e4d04f2914fbe209aef8efbfb1
+      internalID: -165975312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_36
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 32
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41252e669052cca4cb7292dc21ba3fe2
+      internalID: -1859512061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_37
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 30
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a264cbefed193c548a4a1f09930e4658
+      internalID: 1812693805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_38
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 29
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 057f9976fd731dc40866237e15c45ac6
+      internalID: -1363019146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_39
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 30
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 245d8f07d4d47ce448cc0676e8f408f1
+      internalID: -1856290195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_40
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 22
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f750f11381b923645942bec79f84ed5a
+      internalID: -772921013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_41
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 22
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f31a8ab8bdb69c444a7d0ba9dc783f2c
+      internalID: 1466431793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_42
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 22
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7ecdd3b887ef864ebb7edeccc573633
+      internalID: 447596558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_43
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 23
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a932bf084ea73e41848bcd1a69e5d91
+      internalID: -46681271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_44
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 24
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e316fbcdda977ca47854ed7e221231de
+      internalID: 814650186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_45
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 23
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85e050d6262b15a4abe039b618ad3df1
+      internalID: 1506538313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_46
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 21
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7c7e2b1cd2a79d4da9e3cc06683ff76
+      internalID: -1336347110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_47
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 21
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77b37dc6df186af49a0eb35b40a3a34f
+      internalID: 1200730351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_48
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 23
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2be05fdf9dd8f934f8dc6aa6d63e632b
+      internalID: -1691655371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_49
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 22
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fba83ba3fd06a964caef0bcde0b5ffc9
+      internalID: -1032601058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_50
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 6
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3089f734a85680b49bb8c8434b2e4cd6
+      internalID: -363096060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_51
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 2
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e7540d9d4244524e9d45472a9337d87
+      internalID: 458996028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_52
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 8
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59d1a277326f05045be2f5858ca84dc1
+      internalID: -1273370501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_53
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 4
+        width: 19
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c89cc7611d35e2546954451dd01994b7
+      internalID: 1729547006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_54
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 3
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dbd70d2adc8ddc4886e949015a16260
+      internalID: -733744749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_55
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 2
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b5ca1cab3a7d3b498653cc670a15d2b
+      internalID: 113100169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSheet-Trash-Puddles_56
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 3
+        width: 16
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef6dc238f4c4b06429d354c9b4340f8e
+      internalID: -1619265008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +1329,64 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      TileSheet-Trash-Puddles_0: -1601396896
+      TileSheet-Trash-Puddles_1: 1349482456
+      TileSheet-Trash-Puddles_10: -935785074
+      TileSheet-Trash-Puddles_11: 839217068
+      TileSheet-Trash-Puddles_12: -1143208525
+      TileSheet-Trash-Puddles_13: 1912950337
+      TileSheet-Trash-Puddles_14: 1855696018
+      TileSheet-Trash-Puddles_15: 642878231
+      TileSheet-Trash-Puddles_16: -1327440385
+      TileSheet-Trash-Puddles_17: 261750376
+      TileSheet-Trash-Puddles_18: 1909323885
+      TileSheet-Trash-Puddles_19: -1793645430
+      TileSheet-Trash-Puddles_2: 1230121046
+      TileSheet-Trash-Puddles_20: -295602514
+      TileSheet-Trash-Puddles_21: -477073556
+      TileSheet-Trash-Puddles_22: -1741613609
+      TileSheet-Trash-Puddles_23: -86015886
+      TileSheet-Trash-Puddles_24: -2138542977
+      TileSheet-Trash-Puddles_25: 1313570339
+      TileSheet-Trash-Puddles_26: 240711433
+      TileSheet-Trash-Puddles_27: 1253138480
+      TileSheet-Trash-Puddles_28: 530302751
+      TileSheet-Trash-Puddles_29: 600994188
+      TileSheet-Trash-Puddles_3: 1855172031
+      TileSheet-Trash-Puddles_30: -378441360
+      TileSheet-Trash-Puddles_31: -1884828279
+      TileSheet-Trash-Puddles_32: -157598492
+      TileSheet-Trash-Puddles_33: 1286933181
+      TileSheet-Trash-Puddles_34: -1532598474
+      TileSheet-Trash-Puddles_35: -165975312
+      TileSheet-Trash-Puddles_36: -1859512061
+      TileSheet-Trash-Puddles_37: 1812693805
+      TileSheet-Trash-Puddles_38: -1363019146
+      TileSheet-Trash-Puddles_39: -1856290195
+      TileSheet-Trash-Puddles_4: 1089174886
+      TileSheet-Trash-Puddles_40: -772921013
+      TileSheet-Trash-Puddles_41: 1466431793
+      TileSheet-Trash-Puddles_42: 447596558
+      TileSheet-Trash-Puddles_43: -46681271
+      TileSheet-Trash-Puddles_44: 814650186
+      TileSheet-Trash-Puddles_45: 1506538313
+      TileSheet-Trash-Puddles_46: -1336347110
+      TileSheet-Trash-Puddles_47: 1200730351
+      TileSheet-Trash-Puddles_48: -1691655371
+      TileSheet-Trash-Puddles_49: -1032601058
+      TileSheet-Trash-Puddles_5: -726316624
+      TileSheet-Trash-Puddles_50: -363096060
+      TileSheet-Trash-Puddles_51: 458996028
+      TileSheet-Trash-Puddles_52: -1273370501
+      TileSheet-Trash-Puddles_53: 1729547006
+      TileSheet-Trash-Puddles_54: -733744749
+      TileSheet-Trash-Puddles_55: 113100169
+      TileSheet-Trash-Puddles_56: -1619265008
+      TileSheet-Trash-Puddles_6: 1033593921
+      TileSheet-Trash-Puddles_7: -933529346
+      TileSheet-Trash-Puddles_8: -1347369219
+      TileSheet-Trash-Puddles_9: 988101053
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
