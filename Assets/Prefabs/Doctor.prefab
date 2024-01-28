@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 5896882393368531544}
   - component: {fileID: 6607260481246681689}
   - component: {fileID: 3833115151539667998}
-  - component: {fileID: 1596419688088867578}
+  - component: {fileID: 3641401568720576331}
   m_Layer: 0
   m_Name: Doctor
   m_TagString: Untagged
@@ -149,7 +149,7 @@ MonoBehaviour:
   attackCooldownTime: 1
   cooldownSpeed: 1
   maskOn: 0
-  shootCooldown: 0.4
+  shootCooldown: 0.5
   TazerShot: {fileID: 544683256695092898, guid: f1e7da8dffaf4b74ab705902213fd0db, type: 3}
 --- !u!50 &5896882393368531544
 Rigidbody2D:
@@ -244,7 +244,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1596419688088867578
+--- !u!114 &3641401568720576331
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

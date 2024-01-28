@@ -135,6 +135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   attackRange: 4
+  player: {fileID: 0}
   maxSanity: 1
   gasGain: 1
   insaneModeSanity: 0.1

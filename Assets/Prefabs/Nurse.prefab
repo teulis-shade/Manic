@@ -265,7 +265,7 @@ GameObject:
   - component: {fileID: 3805229827452037890}
   - component: {fileID: 4795309397446881673}
   - component: {fileID: 3454564279469783967}
-  - component: {fileID: 130401481873341450}
+  - component: {fileID: 4958537397518478868}
   m_Layer: 0
   m_Name: Nurse
   m_TagString: Untagged
@@ -305,6 +305,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   attackRange: 2
+  player: {fileID: 0}
   maxSanity: 1
   gasGain: 1
   insaneModeSanity: 0.1
@@ -409,7 +410,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &130401481873341450
+--- !u!114 &4958537397518478868
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TazerShot : MonoBehaviour
 {
@@ -27,5 +29,31 @@ public class TazerShot : MonoBehaviour
             }
             transform.localScale = new Vector3(charge, charge * 1.25f);*/
         }
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        //not working aaaaaaaaaaaa
+
+
+        //Destroy(col);
+        if (col.gameObject.GetComponent<PlayerController>() != null){
+            //kill player
+            //Destroy(col.gameObject);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }else{
+            //kill self
+            //Destroy(self);
+
+        }
+
+        /*
+        if (other.GetComponent<PlayerController>() == null && other.GetComponent<CameraBound>() == null)
+        {
+            curSpeed = 0;
+        }
+
+        Debug.Log(col.gameObject.name + " : " + gameObject.name + " : " + Time.time);
+        spriteMove = -0.1f;*/
     }
 }

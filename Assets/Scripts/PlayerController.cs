@@ -213,7 +213,7 @@ public class PlayerController : MonoBehaviour
     }
 
     public void Flicker(bool flicker){
-        print(flicker);
+        //print(flicker);
         foreach (Enemy enemy in Resources.FindObjectsOfTypeAll<Enemy>())
         {
             enemy.Flicker(flicker);
