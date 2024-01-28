@@ -2576,7 +2576,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 30
-  falloff: 8
+  falloff: 7.5
   curSpeed: 0
 --- !u!50 &2026924237
 Rigidbody2D:
