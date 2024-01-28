@@ -110,6 +110,7 @@ MonoBehaviour:
   scale: 3
   meleeRadius: 2.5
   occultGun: 0
+  maxSanity: 5
 --- !u!114 &6232058223018245667
 MonoBehaviour:
   m_ObjectHideFlags: 0
