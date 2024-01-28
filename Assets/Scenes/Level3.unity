@@ -212,6 +212,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1297798702849687343, guid: e7c2818d357933442af7ada3e831c832, type: 3}
+      propertyPath: fallOff
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 2032306617336440284, guid: e7c2818d357933442af7ada3e831c832, type: 3}
       propertyPath: m_Name
       value: Bullet
@@ -288,7 +292,7 @@ Transform:
   m_GameObject: {fileID: 362355654}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15, y: 0, z: 0}
+  m_LocalPosition: {x: 9, y: -4.93, z: 0}
   m_LocalScale: {x: 10, y: 15, z: 50}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -365,6 +369,8 @@ GameObject:
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
+  - component: {fileID: 519420035}
+  - component: {fileID: 519420034}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -484,7 +490,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.83, y: -4.18, z: -10}
+  m_LocalPosition: {x: -8.97, y: -4.88, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -506,6 +512,41 @@ MonoBehaviour:
   rightLocked: 0
   topLocked: 0
   botLocked: 0
+  postProcessing: {fileID: 519420035}
+--- !u!114 &519420034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 56d2f0155b2baa1448a4b417bf584b78, type: 2}
+--- !u!114 &519420035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 0
+  sharedProfile: {fileID: 11400000, guid: 782f31281473323428665df99f7141d4, type: 2}
 --- !u!1 &525849906
 GameObject:
   m_ObjectHideFlags: 0
@@ -623,7 +664,7 @@ Transform:
   m_GameObject: {fileID: 597026921}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -12, z: 0}
+  m_LocalPosition: {x: -6.08, y: -4.08, z: 0}
   m_LocalScale: {x: 20, y: 10, z: 50}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -661,7 +702,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.101116955, y: -0.29506576}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -672,7 +713,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.2022334, y: 0.40986848}
   m_EdgeRadius: 0
 --- !u!114 &597026924
 MonoBehaviour:
@@ -819,11 +860,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7391514969488298767, guid: 7d512f3fd9e86644aba8cf3feff43e68, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.36
+      value: 1.02
       objectReference: {fileID: 0}
     - target: {fileID: 7391514969488298767, guid: 7d512f3fd9e86644aba8cf3feff43e68, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.19
+      value: -7.31
       objectReference: {fileID: 0}
     - target: {fileID: 7391514969488298767, guid: 7d512f3fd9e86644aba8cf3feff43e68, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6204,7 +6245,7 @@ Transform:
   m_GameObject: {fileID: 2082634337}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 12, z: 0}
+  m_LocalPosition: {x: -5.98, y: -6.05, z: 0}
   m_LocalScale: {x: 20, y: 10, z: 50}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6242,7 +6283,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.09849417, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -6253,7 +6294,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.1969883, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &2082634340
 MonoBehaviour:
@@ -6295,7 +6336,7 @@ Transform:
   m_GameObject: {fileID: 2107323772}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15, y: 0, z: 0}
+  m_LocalPosition: {x: -14.03, y: -3.63, z: 0}
   m_LocalScale: {x: 10, y: 15, z: 50}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6440,6 +6481,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 81946795}
     - target: {fileID: 5677444981109407012, guid: 46a99d8ce1d96114980a0fb6403c0049, type: 3}
+      propertyPath: maxSanity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5677444981109407012, guid: 46a99d8ce1d96114980a0fb6403c0049, type: 3}
       propertyPath: playerAnimator
       value: 
       objectReference: {fileID: 1839807544}
@@ -6483,11 +6528,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7391514969488298767, guid: 7d512f3fd9e86644aba8cf3feff43e68, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.29
+      value: 4.19
       objectReference: {fileID: 0}
     - target: {fileID: 7391514969488298767, guid: 7d512f3fd9e86644aba8cf3feff43e68, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.57
+      value: -2.48
       objectReference: {fileID: 0}
     - target: {fileID: 7391514969488298767, guid: 7d512f3fd9e86644aba8cf3feff43e68, type: 3}
       propertyPath: m_LocalPosition.z
