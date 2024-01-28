@@ -82,11 +82,14 @@ abstract public class Enemy : MonoBehaviour
     }
 
     void GoToPlayer(){
-        //float step = speed * Time.deltaTime * (sanity / maxSanity);
+        float step = speed * Time.deltaTime * (sanity / maxSanity);
         float curSpeed = speed * (sanity / maxSanity);
         // move sprite towards the target location
-        //transform.position = Vector2.MoveTowards(transform.position, player.transform.position, step);
-        aiPath.maxSpeed = curSpeed;
+        if (aiPath == null){
+            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, step);
+        }else{
+            aiPath.maxSpeed = curSpeed;
+        }
         var moveDirection = (player.transform.position - transform.position).normalized;
         animator.SetFloat("X", moveDirection.x);
     }
@@ -101,7 +104,7 @@ abstract public class Enemy : MonoBehaviour
                 normalSprite.enabled = false;
                 insaneModeSprite.enabled = true;
                 if (insaneModeSprite.GetComponent<SpriteRenderer>() != null){
-                    if (GetComponent<Body>().enabled == true){ insaneModeSprite.GetComponent<SpriteRenderer>().color = Color.green;}
+                    if (GetComponent<Body>() != null && GetComponent<Body>().enabled == true){ insaneModeSprite.GetComponent<SpriteRenderer>().color = Color.green;}
                 }
             } 
             else 
@@ -109,7 +112,8 @@ abstract public class Enemy : MonoBehaviour
                 normalSprite.enabled = true;
                 insaneModeSprite.enabled = false;
                 if (normalSprite.GetComponent<SpriteRenderer>() != null){
-                    if (GetComponent<Body>().enabled == true){ normalSprite.GetComponent<SpriteRenderer>().color = Color.green;}
+                    //if (GetComponent<Body>() != null)
+                    if (GetComponent<Body>() != null && GetComponent<Body>().enabled == true){ normalSprite.GetComponent<SpriteRenderer>().color = Color.green;}
                 }
             }
         }
