@@ -10,10 +10,12 @@ abstract public class Enemy : MonoBehaviour
 
     [SerializeField] float maxSanity;
     [SerializeField] float gasGain;
+    [SerializeField] float insaneModeSanity = 0.1f;
+    [SerializeField] SpriteRenderer normalSprite;
+    [SerializeField] SpriteRenderer insaneModeSprite;
     float sanity;
 
     private Animator animator;
-
 
     void Start()
     {
@@ -34,7 +36,16 @@ abstract public class Enemy : MonoBehaviour
         }else{
             // print("attack");
         }
-        
+
+        if (insaneModeSprite != null && normalSprite != null) {
+            if (sanity < insaneModeSanity) {
+                normalSprite.enabled = false;
+                insaneModeSprite.enabled = true;
+            } else {
+                normalSprite.enabled = true;
+                insaneModeSprite.enabled = false;
+            }
+        }
     }
 
     void GoToPlayer(){
