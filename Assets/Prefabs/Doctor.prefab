@@ -135,13 +135,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  attackRange: 2
+  attackRange: 5
   player: {fileID: 0}
   maxSanity: 1
   gasGain: 1
   insaneModeSanity: 0.1
   normalSprite: {fileID: 0}
   insaneModeSprite: {fileID: 0}
+  sanity: 0
   attack: 0
   weapon: {fileID: 8011225808340648259}
   attackTime: 1

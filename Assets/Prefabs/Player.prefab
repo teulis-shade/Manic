@@ -105,12 +105,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
-  chargingSpeed: 0.2
+  chargingSpeed: 0.75
   gun: {fileID: 9167569078580242545}
   scale: 3
   meleeRadius: 2.5
   occultGun: 0
   maxSanity: 5
+  sanityReduction: 0.5
+  sanityReductionCooldown: 3
+  normalMusic: {fileID: 8300000, guid: d06234725a600174aaba572bd308abf5, type: 3}
+  zootedMusic: {fileID: 8300000, guid: 2083f268e512d6c4e8174534e5626c1b, type: 3}
 --- !u!114 &6232058223018245667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,6 +244,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: b098d05a-d648-44ad-a319-da44e3cb990f
     m_ActionName: Player/Melee[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5677444981109407012}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnGrab
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 761a6066-97e1-421b-a086-c702a145c916
+    m_ActionName: Player/Grab[/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
