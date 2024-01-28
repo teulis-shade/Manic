@@ -577,6 +577,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1581843463720402264, guid: 7d512f3fd9e86644aba8cf3feff43e68, type: 3}
+      propertyPath: speed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1581843463720402264, guid: 7d512f3fd9e86644aba8cf3feff43e68, type: 3}
+      propertyPath: attackRange
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1581843463720402264, guid: 7d512f3fd9e86644aba8cf3feff43e68, type: 3}
+      propertyPath: cooldownSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1581843463720402264, guid: 7d512f3fd9e86644aba8cf3feff43e68, type: 3}
+      propertyPath: attackCooldownTime
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7391514969488298767, guid: 7d512f3fd9e86644aba8cf3feff43e68, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.02
@@ -620,6 +636,10 @@ PrefabInstance:
     - target: {fileID: 7972197886015110404, guid: 7d512f3fd9e86644aba8cf3feff43e68, type: 3}
       propertyPath: m_Name
       value: Nurse (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7972197886015110404, guid: 7d512f3fd9e86644aba8cf3feff43e68, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6203,21 +6223,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 978328992742544718, guid: 892f3df1d59c81d4bb836a3df511f966, type: 3}
+      propertyPath: cooldownSpeed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1825414042681658545, guid: 892f3df1d59c81d4bb836a3df511f966, type: 3}
       propertyPath: m_Name
       value: Doctor
       objectReference: {fileID: 0}
     - target: {fileID: 1825414042681658545, guid: 892f3df1d59c81d4bb836a3df511f966, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8673060075118888145, guid: 892f3df1d59c81d4bb836a3df511f966, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.03
+      value: -2.7
       objectReference: {fileID: 0}
     - target: {fileID: 8673060075118888145, guid: 892f3df1d59c81d4bb836a3df511f966, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.99
+      value: -3.89
       objectReference: {fileID: 0}
     - target: {fileID: 8673060075118888145, guid: 892f3df1d59c81d4bb836a3df511f966, type: 3}
       propertyPath: m_LocalPosition.z

@@ -577,6 +577,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1581843463720402264, guid: 7d512f3fd9e86644aba8cf3feff43e68, type: 3}
+      propertyPath: cooldownSpeed
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 7391514969488298767, guid: 7d512f3fd9e86644aba8cf3feff43e68, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.02
@@ -6146,6 +6150,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1581843463720402264, guid: 7d512f3fd9e86644aba8cf3feff43e68, type: 3}
+      propertyPath: attackSpeed
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1581843463720402264, guid: 7d512f3fd9e86644aba8cf3feff43e68, type: 3}
+      propertyPath: cooldownSpeed
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 7391514969488298767, guid: 7d512f3fd9e86644aba8cf3feff43e68, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.19

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
@@ -27,17 +28,22 @@ public class PlayerController : MonoBehaviour
     private BulletCharger bulletCharger;
     private Vector2 aimingDirection;
     private Meter meter;
-    private float sanity;
+    [SerializeField] private float sanity;
 
     private Coroutine sanityCoroutine;
 
     private Animator animator;
+
+    private AudioSource cameraAudioSource;
+    private AudioSource playerAudioSource;
 
     //sprites
     //[SerializeField] private SpriteRenderer face;
     private SpriteRenderer gunSprite;
     public AudioClip normalMusic;
     public AudioClip zootedMusic;
+    public AudioClip lessLaugh;
+    public AudioClip insaneLaugh;
 
     public SaveMusic saveMusicPrefab;
     public SaveMusic saveMusic;
@@ -53,31 +59,33 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         gunSprite = gun.GetComponent<SpriteRenderer>();
         cam = FindObjectOfType<CameraController>();
+        cameraAudioSource = Camera.main.GetComponent<AudioSource>();
+        playerAudioSource = GetComponent<AudioSource>();
 
         //save music
 
         //float clip_time = Camera.main.GetComponent<AudioSource>().time;
         //SaveMusic saveMusic = FindObjectOfType<SaveMusic>();
-        
+
         if (FindObjectOfType<SaveMusic>() == null)
         {//first time: instantiate
             print("if i see this twice i say fuck");
             DontDestroyOnLoad(Instantiate(saveMusicPrefab));
             saveMusic = FindObjectOfType<SaveMusic>();
             //get and set
-            Camera.main.GetComponent<AudioSource>().clip = normalMusic;
+            cameraAudioSource.clip = normalMusic;
             
-            Camera.main.GetComponent<AudioSource>().Play();
-            saveMusic.SetMusicLength(Camera.main.GetComponent<AudioSource>().time);
-            //float clip_time = Camera.main.GetComponent<AudioSource>().time;
+            cameraAudioSource.Play();
+            saveMusic.SetMusicLength(cameraAudioSource.time);
+            //float clip_time = cameraAudioSource.time;
         }else{
             //get and start music
             saveMusic = FindObjectOfType<SaveMusic>();
            
-            Camera.main.GetComponent<AudioSource>().clip = normalMusic;
+            cameraAudioSource.clip = normalMusic;
             
-            Camera.main.GetComponent<AudioSource>().Play();
-            Camera.main.GetComponent<AudioSource>().time = saveMusic.GetMusicLength();
+            cameraAudioSource.Play();
+            cameraAudioSource.time = saveMusic.GetMusicLength();
         }
 
         
@@ -100,7 +108,33 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        if (sanity == 0) {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
         cam.UpdatePostProcessing(1 - sanity / maxSanity);
+
+        if (sanity / maxSanity < 0.33f)
+        {
+            float clip_time = playerAudioSource.time;
+            playerAudioSource.clip = insaneLaugh;
+            playerAudioSource.Play();
+            playerAudioSource.time = clip_time;
+
+        }
+        else if (sanity / maxSanity < 0.66f)
+        {
+            float clip_time = playerAudioSource.time;
+            playerAudioSource.clip = lessLaugh;
+            playerAudioSource.Play();
+            playerAudioSource.time = clip_time;
+        }
+        else
+        {
+            playerAudioSource.Stop();
+            playerAudioSource.time = 0;
+            playerAudioSource.clip = null;
+        }
+
         if (moving)
         {
             gameObject.transform.Translate(movement * Time.deltaTime * speed);
@@ -252,19 +286,19 @@ public class PlayerController : MonoBehaviour
         }
         if (!flicker)
         {
-            float clip_time = Camera.main.GetComponent<AudioSource>().time;
-            Camera.main.GetComponent<AudioSource>().clip = normalMusic;
+            float clip_time = cameraAudioSource.time;
+            cameraAudioSource.clip = normalMusic;
             
-            Camera.main.GetComponent<AudioSource>().Play();
-            Camera.main.GetComponent<AudioSource>().time = clip_time;
+            cameraAudioSource.Play();
+            cameraAudioSource.time = clip_time;
 
             saveMusic.SetMusicLength(clip_time);
         }else {
-            float clip_time = Camera.main.GetComponent<AudioSource>().time;
-            Camera.main.GetComponent<AudioSource>().clip = zootedMusic;
+            float clip_time = cameraAudioSource.time;
+            cameraAudioSource.clip = zootedMusic;
             
-            Camera.main.GetComponent<AudioSource>().Play();
-            Camera.main.GetComponent<AudioSource>().time = clip_time;
+            cameraAudioSource.Play();
+            cameraAudioSource.time = clip_time;
 
 
             saveMusic.SetMusicLength(clip_time);

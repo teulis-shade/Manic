@@ -30,10 +30,10 @@ abstract public class Enemy : MonoBehaviour
     //ATTACK 
     public float attackTime = 1f;
     public float attackSpeed = 1f;
-    private Coroutine attackCoroutine;
+    public Coroutine attackCoroutine;
 
     //ATTACK COOLDOWN
-    private Coroutine attackCooldownCoroutine;
+    public Coroutine attackCooldownCoroutine;
     public float attackCooldownTime = 1f;
     public float cooldownSpeed = 1f;
 
@@ -63,6 +63,7 @@ abstract public class Enemy : MonoBehaviour
             //if (attackCoroutine == null)
             //{
             //GoToPlayer();
+            Debug.Log(gameObject.name + " attacking");
             if (attackCoroutine == null && attackCooldownCoroutine == null)
             {
                 attackCoroutine = StartCoroutine(Attack(attackTime));
@@ -85,11 +86,13 @@ abstract public class Enemy : MonoBehaviour
         float step = speed * Time.deltaTime * (sanity / maxSanity);
         float curSpeed = speed * (sanity / maxSanity);
         // move sprite towards the target location
-        if (aiPath == null){
+        //if (aiPath == null){
+            //print("asdf");
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position, step);
-        }else{
-            aiPath.maxSpeed = curSpeed;
-        }
+        // }else{
+        //     Debug.Log(aiPath.maxSpeed);
+        //     aiPath.maxSpeed = curSpeed;
+        // }
         var moveDirection = (player.transform.position - transform.position).normalized;
         animator.SetFloat("X", moveDirection.x);
     }
@@ -166,7 +169,7 @@ abstract public class Enemy : MonoBehaviour
     public virtual void Collision()
     {
         if (attack){
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            FindObjectOfType<PlayerController>().ReduceSanity(.5f);
         }
     }
 
@@ -218,6 +221,9 @@ abstract public class Enemy : MonoBehaviour
     public void BodyHit() 
     {
         sanity -= .25f;
+        if (sanity <= 0) {
+            sanity = 0;
+        }
     }
 }
 

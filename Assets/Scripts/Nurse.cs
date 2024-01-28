@@ -17,6 +17,12 @@ public class Nurse : Enemy
     public override void Update()
     {
         base.Update();
+
+        /*
+        if (attackCoroutine != null){
+            StopCoroutine(attackCoroutine);
+        }*/
+        //StopCoroutine(attackCoroutine);
         
         if (attack){
             weapon.GetComponent<SpriteRenderer>().enabled = true;
@@ -25,6 +31,15 @@ public class Nurse : Enemy
             weapon.GetComponent<SpriteRenderer>().enabled = false;
         }
     }
+
+    /*
+    //IF WANT TO DISABLE HER
+    public override void Collision()
+    {
+        if (attack){
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+    }*/
 
     
 }
