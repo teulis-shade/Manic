@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class CameraController : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class CameraController : MonoBehaviour
     public bool rightLocked;
     public bool topLocked;
     public bool botLocked;
+    [SerializeField] private Volume postProcessing;
     private void Start()
     {
         player = FindObjectOfType<PlayerController>().gameObject;
@@ -46,5 +48,10 @@ public class CameraController : MonoBehaviour
             }
         }
         transform.position = new Vector3(movement.x, movement.y, -10f);
+    }
+
+    public void UpdatePostProcessing(float intensity)
+    {
+        postProcessing.weight = intensity;
     }
 }

@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float scale;
     [SerializeField] private float meleeRadius;
     [HideInInspector] [SerializeField] private bool occultGun;
+    [SerializeField] private float maxSanity;
+    private CameraController cam;
     private float currentCharge = 0f;
     private Bullet bullet;
     private BulletCharger bulletCharger;
@@ -36,9 +38,10 @@ public class PlayerController : MonoBehaviour
         bulletCharger = FindObjectOfType<BulletCharger>();
         bulletCharger.gameObject.SetActive(false);
         meter = FindObjectOfType<Meter>();
-        sanity = 100;
+        sanity = maxSanity;
         animator = GetComponent<Animator>();
         gunSprite = gun.GetComponent<SpriteRenderer>();
+        cam = FindObjectOfType<CameraController>();
     }
     public void OnMove(InputAction.CallbackContext ctx)
     {
@@ -57,6 +60,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        cam.UpdatePostProcessing(1 - sanity / maxSanity);
         if (moving)
         {
             gameObject.transform.Translate(movement * Time.deltaTime * speed);
@@ -132,5 +136,9 @@ public class PlayerController : MonoBehaviour
     public void ReduceSanity(float loss)
     {
         sanity -= loss;
+        if (sanity < 0)
+        {
+            sanity = 0;
+        }
     }
 }
